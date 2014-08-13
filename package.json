@@ -1,0 +1,34 @@
+{
+    "name": "plugs",
+    "description": "A gang of JS plugins with cheap suits and receding hairlines",
+    "homepage": "https://github.com/caleorourke/plugs",
+    "keywords": [
+        "analytics",
+        "blur",
+        "classify",
+        "easing",
+        "toggle",
+        "indexing",
+        "pegging",
+        "reading",
+        "toggle"
+    ],
+    "maintainers": [
+        {
+            "name": "Michael O'Rourke",
+            "email": "morourke@softlayer.com"
+        }
+    ],
+   "roster": [
+       {
+           "analytics": "https://github.com/caleorourke/plugs/blob/master/plugins/analytics.js",
+           "blur":      "https://github.com/caleorourke/plugs/blob/master/plugins/blur.js",
+           "classify":  "https://github.com/caleorourke/plugs/blob/master/plugins/classify.js",
+           "easing":    "https://github.com/caleorourke/plugs/blob/master/plugins/easing.js",
+           "indexing":  "https://github.com/caleorourke/plugs/blob/master/plugins/indexing.js",
+           "pegging":   "https://github.com/caleorourke/plugs/blob/master/plugins/pegging.js",
+           "reading":   "https://github.com/caleorourke/plugs/blob/master/plugins/reading.js",
+           "toggle":    "https://github.com/caleorourke/plugs/blob/master/plugins/toggle.js"
+       }
+   ]
+}

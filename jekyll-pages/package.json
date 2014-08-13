@@ -1,0 +1,39 @@
+{
+    "name": "jekyll-pages",
+    "description": "A cloned grunt.js plugin of grunt-jekyll to execute Jekyll-like behavior",
+    "version": "0.0.1",
+    "homepage": "https://github.com/caleorourke/grunt-poole",
+    "author": "Michael O'Rourke <michael.orourke@zoho.com> ()",
+    "contributors": [
+                    "Danny Garcia <contact@danny-garcia.com> (http://danny-garcia.com)",
+                    "Rob Wierzbowski <hello@robwierzbowski.com> (http://robwierzbowski.com)"
+                    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/caleorourke/grunt-poole.git"
+        },
+    "bugs": {
+        "url": "https://github.com/caleorourke/grunt-poole/issues"
+        },
+    "license": "MIT",
+    "bin": "bin/grunt-poole",
+    "engines": {
+        "node": ">= 0.10.5"
+    },
+    "dependencies": {
+        "tmp": "~0.0.23"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-jshint": "~0.10.0",
+        "grunt-mocha-test": "~0.11.0"
+    },
+    "peerDependencies": {
+        "grunt": "~0.4.1"
+    },
+    "scripts" : {
+        "test" : "grunt test"
+    },
+    "keywords": ["jekyll", "gruntplugin"],
+    "files": ["bin", "tasks"]
+}

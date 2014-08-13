@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+    <title>Code Standards</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="margin">
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8">
+            <h1 class="title">Standards for Flexible and Sustainable Code</h1>
+            <h2 class="lead">A guide that everyone gripes about not having but doesn't follow when they do.</h2>
+
+            <h1 id="1">Introduction</h1>
+                <p>All code in any code base should look like a single person typed it, no matter how many people contributed. Strive to maintain standards and semantics, but don’t sacrifice pragmatism. Use the least amount of markup with the fewest intricacies whenever possible.</p>
+
+            <hr>
+            <h1 id="2">Basic Syntax</h1>
+
+                <ul>
+                    <li>Use soft-tabs with two spaces</li>
+                    <li>Nested elements should be indented once (2 spaces)</li>
+                    <li>Always use double quotes <code>"</code>, never single quotes <code>'</code></li>
+                    <li>Don’t include a trailing slash in self-closing elements</li>
+                </ul>
+
+            <hr>
+            <h1 id="3">Attribute Order</h1>
+                <p>HTML attributes should come in this particular order for easier reading of code.</p>
+
+                <ul>
+                    <li>class</li>
+                    <li>id</li>
+                    <li>data-*</li>
+                    <li>for|type|href</li>
+                </ul>
+
+            <hr>
+            <h1 id="4">CSS Styling</h1>
+
+                <ul>
+                    <li>Use soft-tabs with two spaces</li>
+                    <li>When grouping selectors, keep individual selectors to a single line</li>
+                    <li>Include one space before the opening brace of declaration blocks</li>
+                    <li>Place closing braces of declaration blocks on a new line</li>
+                    <li>Each declaration should appear on its own line</li>
+                    <li>Comma-separated values should include a space after each comma</li>
+                    <li>Don’t include spaces after commas in RGB or RGBa colors, and don’t preface values with a leading zero</li>
+                </ul>
+
+            <hr>
+            <h1 id="5">Declaration Order</h2>
+                <p>Group all related declarations together. This means placing positioning and box-model properties closest to the top, followed by typographic and visual properties.</p>
+
+            <hr>
+            <h1 id="6">Formatting Exceptions</h2>
+                <p>In some cases, it makes sense to deviate slightly from the default <a href="#css-syntax">syntax</a>.</p>
+
+                <h2 id="7">Prefixed Properties</h3>
+                    <p>When using vendor prefixed properties, indent each property such that the value lines up vertically for easy multi-line editing.</p>
+
+                <h2 id="8">Rules with Single Declarations</h3>
+                    <p>In instances where several rules are present with only one declaration each, consider removing new line breaks for readability and faster editing.</p>
+
+            <hr>
+            <h1 id="9">Class Names</h1>
+
+                <ul>
+                    <li>Keep classes lowercase and use dashes (not underscores or camelCase)</li>
+                    <li>Avoid arbitrary shorthand notation</li>
+                    <li>Keep classes as short and succinct as possible</li>
+                    <li>Use meaningful names; use structural or purposeful names over presentational</li>
+                </ul>
+
+            <hr>
+            <h1 id="10">Learn More</h1>
+                <p>Read up on the entire code guide at <a href="http://codeguide.co" target="_blank">http://codeguide.co</a>.
+        </div>
+
+        <div class="col-lg-2 col-lg-offset-1 col-md-2">
+            <nav>
+                <ul class="indexing"></ul>
+            </nav>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- JS Library -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="indexing.js"></script>
+
+    <!-- onDomReady -->
+    <script>
+        $(document).ready(function() {
+            $(".indexing").indexing();
+        });
+    </script>
+
+</body>
+</html>
