@@ -7,9 +7,16 @@ Its name originates not only from wanting to pluck our hair out while developing
 
 ## Roster
 
+* [Analytics](/analytics.js)
+* [Blur](/blur.js)
 * [Classify](/classify.js)
-* [Indexing](#indexing)
-* [Toggle](#toggle)
+* [Easing](/easing.js)
+* [Indexing](/indexing.js)
+* [Jekyll Pages](/jekyll-pages)
+* [Pegging](/pegging.js)
+* [Profile](/profile.js)
+* [Reading](/reading.js)
+* [Toggle](/toggle.js)
 
 
 ## License
