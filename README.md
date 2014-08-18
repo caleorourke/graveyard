@@ -7,7 +7,7 @@ Its name originates not only from wanting to pluck our hair out while developing
 
 ## Roster
 
-* [Classify](#classify)
+* [Classify](/classify.js)
 * [Indexing](#indexing)
 * [Toggle](#toggle)
 
