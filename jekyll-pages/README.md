@@ -1,50 +1,48 @@
 # jekyll-pages
 
-[![Build Status](https://travis-ci.org/dannygarcia/grunt-jekyll.svg?branch=master)](https://travis-ci.org/dannygarcia/grunt-jekyll)
-[![Dependency Status](https://david-dm.org/dannygarcia/grunt-jekyll.svg?theme=shields.io)](https://david-dm.org/dannygarcia/grunt-jekyll)
-[![devDependency Status](https://david-dm.org/dannygarcia/grunt-jekyll/dev-status.svg?theme=shields.io)](https://david-dm.org/dannygarcia/grunt-jekyll#info=devDependencies)
+[![Build Status](https://travis-ci.org/caleorourke/jekyll-pages.svg?branch=master)](https://travis-ci.org/caleorourke/jekyll-pages)
+[![Dependency Status](https://david-dm.org/caleorourke/jekyll-pages.svg?theme=shields.io)](https://david-dm.org/caleorourke/jekyll-pages)
+[![devDependency Status](https://david-dm.org/caleorourke/jekyll-pages/dev-status.svg?theme=shields.io)](https://david-dm.org/caleorourke/jekyll-pages#info=devDependencies)
 
-> Serve [Jekyll](http://jekyllrb.com/)-powered sites locally using [Grunt](http://gruntjs.com/).
+> Serve [Jekyll](http://jekyllrb.com)-powered sites locally using [Grunt](http://gruntjs.com).
 
 ## Getting Started
 
-This plugin requires [Grunt](http://gruntjs.com/) `~0.4.0` and [Jekyll](http://jekyllrb.com/) `>= v2.0.0`.
+This plugin requires [Grunt](http://gruntjs.com) `~0.8.0` and [Jekyll](http://jekyllrb.com) `>= v2.0.0`.
 
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, which explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with the command:
+If you haven't used [Grunt](http://gruntjs.com) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, which explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with the command:
 
 ```shell
-npm install grunt-poole --save-dev
+npm install jekyll-pages --save-dev
 ```
 
-After the plugin has been installed, load it in your Gruntfile with:
+After the plugin has been installed, load it in your Gruntfile:
 
 ```js
-grunt.loadNpmTasks("grunt-poole");
+grunt.loadNpmTasks("jekyll-pages");
 ```
 
-## Jekyll Task
+## Configuration
 
-_Run this task with the `grunt poole` command._
-
-This task compiles your Jekyll static site with Grunt.
+Setup your `Gruntfile.js` to use any of the available options below.
 
 ### options
 
-You can use all of the configuration options available in the [Jekyll Documentation](http://jekyllrb.com/docs/configuration/), as well as some special options provided by this plugin.
+You can use all of the configuration options available in the [Jekyll Documentation](http://jekyllrb.com/docs/configuration), as well as some special options provided by this plugin.
 
 #### src
 
 Type: `string` <br/>
 Default: `.`
 
-The directory Jekyll read files from.
+The directory Jekyll reads files from.
 
 #### dest
 
 Type: `string` <br/>
 Default: `./_site`
 
-The directory Jekyll write files to.
+The directory Jekyll writes files to.
 
 #### watch
 
@@ -53,7 +51,7 @@ Default: `false`
 
 Regenerates the site when files are modified.
 
-> To run multiple watch tasks in a project, use [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) instead.
+To run multiple watch tasks in a project, use [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) instead.
 
 #### serve
 
@@ -64,7 +62,7 @@ Builds the site and starts a local Jekyll development server on <samp>http://loc
 
 Serve mode does last forever. Kill it by pressing <kbd>Ctrl+C</kbd>.
 
-> For complex projects, use [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect) instead.
+For complex projects, use [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect) instead.
 
 #### doctor (cut)
 
@@ -84,28 +82,28 @@ Specifies a custom configuration file. Multiple files separated by a comma will 
 
 Type: `string`
 
-Create a temporary <samp>_config.yml</samp> with the contents of `raw`. This config file has greater precedence than other config files.
+Creates a temporary <samp>_config.yml</samp> with the contents of `raw`. This config file takes precedence over other config files.
 
 #### safe
 
 Type: `boolean` <br/>
 Default: `true` CHANGE THIS!
 
-Disables custom plugins.
+Enables or disables custom plugins. If you're using GitHub to publish your site, this option will automatically be set to `false`. 
 
 #### plugins
 
 Type: `string` <br/>
 Default: `./_plugins`
 
-A directory for plugins. 
+The directory for plugins. 
 
 #### layouts
 
 Type: `string` <br/>
 Default: `./_layouts`
 
-A directory for layouts.
+The directory for layouts.
 
 #### drafts
 
@@ -114,7 +112,7 @@ Default: `false`
 
 Processes and renders draft posts.
 
-#### future
+#### future (cut)
 
 Type: `boolean` <br/>
 Default: `false`
@@ -128,7 +126,7 @@ Default: `false`
 
 Produces an index for related posts.
 
-#### limit_posts
+#### limit_posts (cut)
 
 Type: `number` <br/>
 
@@ -161,40 +159,67 @@ Run `jekyll` with [bundle exec](http://gembundler.com/v1.3/man/bundle-exec.1.htm
 
 ## Usage Examples
 
-Follow [this Grunt example](https://gist.github.com/3753650) to get started with grunt-poole right away.
+Follow [this Grunt example](https://gist.github.com/3753650) to get started with jekyll-pages quickly.
 
-### Example Configs
+### Example Config No. 1
+
+In this example, running `grunt jekyll` will fire off the task.
 
 ```js
 grunt.initConfig({
-  jekyll: {                             // Task
-    options: {                          // Universal options
-      bundleExec: true,
-      src : "<%= app %>"
-    },
-    dist: {                             // Target
-      options: {                        // Target options
-        dest: "<%= dist %>",
-        config: "_config.yml,_config.build.yml"
-      }
-    },
-    serve: {                            // Another target
-      options: {
-        dest: ".jekyll",
-        drafts: true
-      }
+    jekyll: {                               // Task
+        options: {                          // Universal options
+            bundleExec: true,
+            src : "<%= app %>"
+        },
+        dist: {                             // Target
+            options: {                      // Target options
+                dest: "<%= dist %>",
+                config: "_config.yml,_config.build.yml"
+            }
+        },
+        serve: {                            // Another target
+            options: {
+                dest: ".jekyll",
+                drafts: true
+            }
+        }
     }
-  }
 });
 
-grunt.loadNpmTasks("grunt-poole");
+grunt.loadNpmTasks("jekyll-pages");
 
-grunt.registerTask("default", ["jshint", "jekyll"]);
+grunt.registerTask("default", ["jekyll"]);
+```
+
+### Example Config No. 2
+
+In this example, running `grunt serve` will fire off one task, and  `grunt test` will fire off the other.
+
+```js
+grunt.initConfig({
+    jekyll: {
+        test: {},
+        serve: {
+            options: {
+                watch: true,
+                serve: true,
+                baseurl: ["\"\""]
+            }
+        }
+    }
+});
+
+grunt.loadNpmTasks("jekyll-pages");
+
+    
+grunt.registerTask("preview",      ["jekyll:preview"]);
+grunt.registerTask("test",         ["jekyll:test"]);
 ```
 
 ### Example Usage
 
-#### Use the `raw` option
+#### Using the `raw` option
 
 ```js
 grunt.initConfig({
