@@ -1,4 +1,4 @@
-# jekyll-pages
+# Jekyll Pages
 
 [![Build Status](https://travis-ci.org/caleorourke/jekyll-pages.svg?branch=master)](https://travis-ci.org/caleorourke/jekyll-pages)
 [![Dependency Status](https://david-dm.org/caleorourke/jekyll-pages.svg?theme=shields.io)](https://david-dm.org/caleorourke/jekyll-pages)
@@ -213,8 +213,8 @@ grunt.initConfig({
 grunt.loadNpmTasks("jekyll-pages");
 
     
-grunt.registerTask("preview",      ["jekyll:preview"]);
-grunt.registerTask("test",         ["jekyll:test"]);
+grunt.registerTask("serve", ["jekyll:serve"]);
+grunt.registerTask("test",  ["jekyll:test"]);
 ```
 
 ### Example Usage

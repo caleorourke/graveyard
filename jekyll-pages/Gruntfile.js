@@ -1,9 +1,9 @@
 'use strict';
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     grunt.initConfig({
         pkg: {
-            name: "grunt-poole"
+            name: "jekyll-pages"
         },
 
         jekyll: {
