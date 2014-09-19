@@ -1,3 +1,3 @@
-## Plugs
+## Munition
 
-A reserved stockpile of munitions, scripts, and stuff.
+A reserved stockpile of tools, scripts, and possibly some unstable code. Proceed with caution. 
