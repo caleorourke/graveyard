@@ -1,0 +1,50 @@
+/* =========================
+   Banner
+   ========================= */
+
+.banner {
+  .transition-duration(.5s);
+  .transition-property(all);
+  background-color: @banner-bg;
+  height: auto;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    margin: 0;
+    color: @banner-color !important;
+    padding: 22px 0 11px;
+    font-size: 26px;
+    font-weight: @font-weight-light !important;
+    line-height: 1;
+    letter-spacing: @letter-spacing-large;
+  }
+
+  p {
+    color: @banner-color-paragraph;
+    letter-spacing: 0;
+    font-weight: @font-weight-light !important;
+    font-family: @font-family-sans;
+    font-size: 16px;
+    line-height: @line-height-normal;
+  }
+}
+
+#banner-wrapper {
+  padding-top: 55px;
+  padding-bottom: 0;
+  &:last-child {
+    padding-bottom: 55px;
+  }
+}
+
+@media (min-width: @screen-sm) {
+  #banner-wrapper {
+    padding-bottom: 55px;
+  }
+}
+
+i#banner {
+  font-size: 143px;
+  color: @banner-icons;
+}

@@ -1,0 +1,44 @@
+<!-- Determines which about section to showcase based on the page name -->
+{% if page.title != "cli" %}
+
+<section class="about"> <!-- About -->
+<div class="container">
+<div class="row">
+<div class="col-lg-5 col-sm-6">
+
+  <h1 class="about-name">{{site.project.name}} is an open-source project</h1>
+  <h2 class="about-tagline">It's hosted, developed, and maintained on GitHub</h2>
+  <a class="btn red" href="#">View on GitHub</a>
+
+</div>
+<div class="col-lg-5 col-lg-offset-2 col-sm-6">
+
+  <img src="{{page.baseurl}}public/images/connect.png" width="397" height="193" alt="View on GitHub">
+
+</div>
+</div>
+</div>
+</section> <!-- End About -->
+
+{% else %}
+
+<section class="about"> <!-- About -->
+<div class="container">
+<div class="row">
+<div class="col-lg-5 col-sm-6">
+
+  <h1 class="about-name">CLI is an open-source project</h1>
+  <h2 class="about-tagline">It's hosted, developed, and maintained on GitHub</h2>
+  <a class="btn red" href="#">View on GitHub</a>
+
+</div>
+<div class="col-lg-5 col-lg-offset-2 col-sm-6">
+
+  <img src="{{page.baseurl}}public/images/connect.png" width="397" height="193" alt="View on GitHub">
+
+</div>
+</div>
+</div>
+</section> <!-- End About -->
+
+{% endif %}

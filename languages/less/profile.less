@@ -1,0 +1,116 @@
+/* =========================
+   Profile
+   ========================= */
+
+.profile {
+  display: none;
+}
+
+@media (min-width: @screen-sm) {
+  .profile {
+    .center-block();
+    text-align: center;
+    background-color: @white;
+    padding: 66px 0;
+  }
+}
+
+ol#repos {
+  margin: 0;
+  padding: 0;
+}
+
+.project .name {
+  width: 225px;
+  display: inline;
+  float: left;
+  position: relative;
+  margin: 15px 5px;
+  border-bottom-width: 2.5px;
+}
+
+.repo {
+  border-radius: 5px;
+  border: 1px solid @profile-repo-border;
+  background: @profile-repo-bg;
+  height: 275px;
+
+  > a {
+    display:block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    border-bottom: 0;
+  }
+
+  h4,
+  h5,
+  h6 {
+    color: @profile-repo-footer-color;
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    font-weight: @font-weight-normal;
+    font-size: 11.5px;
+  }
+
+  h2,
+  h4,
+  p {
+    text-align: left;
+  }
+
+  h5,
+  h6 {
+    text-align: right;
+  }
+
+  h2 {
+    color: @profile-repo-header-color;
+    font-size: @font-size-h3;
+    line-height: @line-height-xsmall;
+    font-weight: @font-weight-normal;
+    border-bottom: 1px solid @profile-repo-border;
+    padding: 11px 15px;
+    margin-top: 0;
+    letter-spacing: @letter-spacing-large;
+  }
+
+  h4 {
+    padding: 15px 25px 25px 15px;
+    background-color: @profile-repo-footer-bg;
+  }
+
+  h5 {
+    padding: 15px 45px 23px 0;
+    &:before {
+      padding-right: 3px;
+      content: "\f005";
+      font-family: FontAwesome;
+    }
+  }
+
+  h6 {
+    padding: 15px 15px 23px 0;
+    &:before {
+      padding-right: 3px;
+      content: "\f126";
+      font-family: FontAwesome;
+    }
+  }
+
+  p {
+    color: @profile-repo-color;
+    font-size: @font-size-medium;
+    margin: 11px 11px 20px 15px;
+    font-family: @font-family-sans;
+  }
+}
+
+.repo.name.c {
+    font-style: normal;
+}

@@ -1,0 +1,83 @@
+/* =========================
+   Items
+   ========================= */
+
+.items {
+  margin-bottom: @component-margin;
+  padding-left: 0;
+}
+
+// Individual items
+// -------------------------
+
+.item {
+  position: relative;
+  display: block;
+  margin-bottom: -1px;
+  padding: 10px 15px;
+  border: 1px solid @item-border;
+  background-color: @item-bg;
+
+  &:first-child {
+    .border-top-radius(@border-radius-normal);
+  }
+
+  &:last-child {
+    .border-bottom-radius(@border-radius-normal);
+    margin-bottom: 0;
+  }
+
+  > .badge {
+    float: right;
+  }
+
+  > .badge + .badge {
+    margin-right: 5px;
+  }
+}
+
+// Linked items
+// -------------------------
+
+a.item {
+  color: @item-link-color;
+
+  &.item-heading {
+    color: @item-link-heading-color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @item-hover-bg;
+    text-decoration: none;
+  }
+
+  &.active,
+  &.active:hover,
+  &.active:focus {
+    z-index: 2;
+    border-color: @item-active-border;
+    background-color: @item-active-bg;
+    color: @item-active-color;
+
+    .item-heading {
+      color: inherit;
+    }
+    .item-text {
+      color: @item-active-text-color;
+    }
+  }
+}
+
+// Content options
+// -------------------------
+
+.item-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.item-text {
+  margin-bottom: 0;
+  line-height: @line-height-large;
+}

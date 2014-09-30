@@ -1,0 +1,51 @@
+/* =========================
+   Modes
+   ========================= */
+
+// Buttons
+// -------------------------
+
+a#invert-toggle,
+a#expand-toggle {
+  position: absolute;
+  top: 16.5px;
+  display: block;
+  background-color: transparent;
+  color: lighten(@lighter7, 5%) !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+a#invert-toggle {
+  right: 16px;
+  font-size: 24.5px;
+}
+
+a#expand-toggle {
+  right: 40px;
+  font-size: 22px;
+  top: 17.5px;
+}
+
+// Invert mode
+// -------------------------
+
+.invert {
+  background-color: @black;
+  color: @body-bg;
+
+  a {
+      color: lighten(@link-color, 24%);
+  }
+
+  h1, h2, h3, h4 {
+  	color: @lighter7;
+  }
+}
+
+// Distraction-free mode
+// -------------------------
+
+.expand {
+  font-size: 200%;
+}

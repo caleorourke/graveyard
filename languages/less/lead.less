@@ -1,0 +1,43 @@
+/* =========================
+   Lead
+   ========================= */
+
+.lead {
+  text-align: center;
+  padding: 33px 0;
+  background-color: @lead-bg;
+
+  h1 {
+    color: @lead-color;
+    font-size: 26px;
+    font-weight: @font-weight-light;
+    line-height: @line-height-normal;
+    margin: 0;
+    padding-bottom: 11px;
+  }
+
+  h3 {
+    color: @lead-color-paragraph;
+    font-size: 18px;
+    line-height: @line-height-normal;
+    margin: 0;
+    font-weight: @font-weight-light;
+    font-family: @font-family-sans;
+    letter-spacing: 0;
+  }
+}
+
+@media (min-width: @screen-sm) {
+  .lead {
+    padding: 88px 0 55px;
+
+    h1 {
+      font-size: 35px;
+    }
+
+    h3 {
+      font-size: 24px;
+      padding: 0 66px;
+    }
+  }
+}

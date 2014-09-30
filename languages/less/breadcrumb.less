@@ -1,0 +1,25 @@
+/* =========================
+   Breadcrumb
+   ========================= */
+
+.breadcrumb {
+  margin-bottom: @component-margin;
+  padding: @component-padding;
+  border-radius: @border-radius-normal;
+  background-color: @breadcrumb-bg;
+  list-style: none;
+
+  > li {
+    display: inline-block;
+
+    + li:before {
+      padding: 0 5px;
+      color: @breadcrumb-color;
+      content: "\003e \00a0";
+    }
+  }
+
+  > .active {
+    color: @breadcrumb-active-color;
+  }
+}

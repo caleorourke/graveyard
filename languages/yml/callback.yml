@@ -1,0 +1,26 @@
+- request: commits
+  url: https://api.github.com/repos/softlayer/softlayer-python/commits?state=closed/callback?
+
+- request: contributors
+  url: https://api.github.com/repos/softlayer/softlayer-python/contributors?callback=?
+
+- request: members
+  url: https://api.github.com/orgs/softlayer/members?callback=?
+
+- request: milestones
+  url: https://api.github.com/repos/softlayer/softlayer-python/milestones?state=closed/callback?
+
+- request: pulls
+  url: https://api.github.com/repos/softlayer/softlayer-python/pulls?callback=?
+
+- request: repos
+  url: https://api.github.com/orgs/softlayer/repos?callback=?
+
+- request: stargazers
+  url: https://api.github.com/repos/softlayer/softlayer-python/stargazers?callback=?
+
+- request: tags
+  url: https://api.github.com/repos/softlayer/softlayer-python/tags?callback?
+
+- request: watchers
+  url: https://api.github.com/repos/softlayer/softlayer-python/subscribers?callback=?

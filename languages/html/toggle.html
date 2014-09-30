@@ -1,0 +1,8 @@
+<!-- Toggle -->
+<!-- Determines which menu to show based on the page title -->
+{% if page.title == "index" %}
+  {% include menu-alias.html %}
+{% else %}
+  {% include menu.html %}
+{% endif %}
+<!-- End Toggle -->

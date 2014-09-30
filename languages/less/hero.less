@@ -1,0 +1,99 @@
+/* =========================
+   Hero
+   ========================= */
+
+.hero,
+.hero-alias {
+  text-align: center;
+  padding: 33px 0 91px;
+  width: 100%;
+  height: auto;
+  color: @hero-color;
+  background-color: @hero-bg;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+.hero {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../public/images/featured-bg.jpg");
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../public/images/featured-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../public/images/featured-bg.jpg");
+}
+
+.hero-alias {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../public/images/featured-bg.jpg");
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../public/images/featured-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../public/images/featured-bg.jpg");
+}
+
+.hero-name {
+  margin: 99px 0 0;
+  color: @hero-color;
+  font-weight: @font-weight-bold;
+  font-size: 39px;
+}
+
+.hero-tagline {
+  margin: 0 0 11px;
+  color: @hero-tagline-color;
+  letter-spacing: @letter-spacing-normal;
+  font-weight: @font-weight-light;
+  font-size: 23px;
+  line-height: @line-height-xsmall;
+}
+
+.hero-buttons {
+  display: block;
+  margin-bottom: 22px;
+
+  > a.btn.white {
+    margin: auto 2px;
+    width: 132px;
+  }
+}
+
+.hero-version {
+  p {
+    margin: 22px 0 0;
+    color: @hero-version-color;
+    letter-spacing: @letter-spacing-normal;
+    font-size: 14px;
+    font-family: @font-family-modern-sans;
+  }
+}
+
+.hero-image {
+  position: absolute;
+  right: .5px;
+}
+
+@media (min-width: @screen-sm) {
+  .hero,
+  .hero-alias {
+    padding: 220px 0 231px;
+  }
+
+  .hero-name {
+    margin: 0;
+    font-size: 50px;
+  }
+
+  .hero-tagline {
+    margin: 0 0 22px;
+    font-size: 28px;
+    line-height: @line-height-small;
+  }
+  .hero-image {
+    right: 18px;
+  }
+}
+
+@media (min-width: @screen-lg) {
+  .hero,
+  .hero-alias {
+    padding: 220px 0 330px;
+  }
+}

@@ -1,0 +1,17 @@
+- label: API
+  url: https://github.com/softlayer/softlayer-python/issues?labels=API&state=open
+
+- label: Bugs
+  url: https://github.com/softlayer/softlayer-python/issues?labels=Bug&state=open
+
+- label: CLI
+  url: https://github.com/softlayer/softlayer-python/issues?labels=CLI&state=open
+
+- label: Internal
+  url: https://github.com/softlayer/softlayer-python/issues?labels=Internal&state=open
+
+- label: Needs Discussion
+  url: https://github.com/softlayer/softlayer-python/issues?labels=Needs+discussion&state=open
+
+- label: New Feature
+  url: https://github.com/softlayer/softlayer-python/issues?labels=New+Feature&state=open

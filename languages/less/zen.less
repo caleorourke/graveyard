@@ -1,0 +1,106 @@
+/* Used by the ui bubble to stop wrapping */
+.lengthen {
+  display: block;
+  width: 300px;
+  height: 100%;
+}
+
+.useicons {
+  -webkit-font-smoothing: antialiased;
+  font-size: 20px !important;
+}
+
+.darken {
+  background-color: @black;
+  color: @lighter9;
+}
+
+.zen {
+  position: fixed;
+  padding: 20px;
+  width: 65px;
+  bottom: 0px;
+  left: 0px;
+  top: 0px;
+}
+
+.zen:hover button {
+  opacity: 0.4;
+}
+
+.zen button:hover {
+  opacity: 1;
+}
+
+.zen button, .text-options button {
+
+  -webkit-transition: opacity 400ms;
+  -moz-transition: opacity 400ms;
+  -ms-transition: opacity 400ms;
+  -o-transition: opacity 400ms;
+  transition: opacity 400ms;
+
+  font-family: inherit;
+  background: none;
+  cursor: pointer;
+  font-size: 25px;
+  color: inherit;
+  opacity: 0.1;
+  padding: 0px;
+  height: 32px;
+  width: 25px;
+  border: 0px;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  left: 0px;
+  top: 0px;
+}
+
+.description {
+  height: 225px;
+}
+
+.saveoverlay {
+  margin-left: -215px;
+  margin-top: -100px;
+  height: 170px;
+  left: 50%;
+  top: 50%;
+}
+
+.saveoverlay div {
+  text-align: center;
+  font-size: 11px;
+}
+
+.saveselection {
+  margin-top: 17px;
+  text-align:center;
+}
+
+.saveselection span {
+
+  -webkit-transition: color 250ms, background 250ms;
+  -moz-transition: color 250ms, background 250ms;
+  -ms-transition: color 250ms, background 250ms;
+  -o-transition: color 250ms, background 250ms;
+  transition: color 250ms, background 250ms;
+
+  cursor: pointer;
+  font-size: 15px;
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.saveselection span:hover {
+  background: rgba(255,255,255,0.8);
+  color: black;
+}
