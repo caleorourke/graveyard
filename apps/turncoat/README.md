@@ -9,13 +9,13 @@ Turncoat is a blueprint for defining data artifacts in a visual manner.
 * [Code Organization](#code-organization)
 * [Versions](#versions)
 
-### Prerequisites
+## Prerequisites
 
 Turncoat is hosted on GitHub using [GitHub Pages](http://pages.github.com). It can be served locally using [Jekyll](http://jekyllrb.com) with __Ruby 1.9.3__ or greater. [Click here](http://www.ruby-lang.org/en/installation) to download and install Ruby.
 
 > If you have Ruby, but aren’t sure which version, run `ruby -v`.
 
-### Quick Install
+## Quick Install
 
 1. Clone from GitHub and go into the directory.
 
@@ -30,7 +30,7 @@ Turncoat is hosted on GitHub using [GitHub Pages](http://pages.github.com). It c
 
         $ [sudo] grunt install
 
-### Local Deployment
+## Local Deployment
 
 Run the command below to preview a local instance of your site.
 
@@ -40,11 +40,11 @@ $ jekyll serve
 
 After Jekyll starts, fire up a browser and type in `localhost:4000` for the web address. This will pull up the site Jekyll just generated.
 
-#### Killing Jekyll
+### Killing Jekyll
 
 Serve mode lasts forever. It won't timeout after a period of non-usage. Press `CTRL+C` to stop the service.
 
-### Roll Your Own
+## Roll Your Own
 
 1. Make a fresh clone and go into the directory.
 
@@ -65,7 +65,7 @@ Serve mode lasts forever. It won't timeout after a period of non-usage. Press `C
         $ git commit -a -m "first commit"
         $ git push origin gh-pages
 
-### Code Organization
+## Code Organization
 
 Below is the basic spread for Turncoat (not including Jekyll or GitHub-related objects).
 
@@ -83,8 +83,9 @@ Below is the basic spread for Turncoat (not including Jekyll or GitHub-related o
 │   ├─ fonts/
 │   ├─ img/
 │   └─ js/
-├─ less/
-├─ plugins/
+├─ framework/
+│   ├─ less/
+│   └─ plugins/
 ├─ alerts.html
 ├─ config.html
 ├─ index.html
@@ -96,7 +97,7 @@ Below is the basic spread for Turncoat (not including Jekyll or GitHub-related o
 └─ usage.html
 </pre>
 
-### Versions
+## Versions
 
 Versions are in order of freshness and are named using one variation of the [first internationally recognized phonetic alphabet](https://gist.github.com/caleorourke/aebb9f2a916814ea4924).
 
@@ -106,27 +107,9 @@ The current version is **North**.
 | -------------- | -------------------- |
 | Name           | Turncoat (Informant) |
 | Version        | [North](http://github.com/caleorourke/turncoat/tree/gh-pages) |
-| Target Release | TBD                  |
+| Target Release | -                    |
 | Status         | Deprecated           |
 | Last Updated   | 2/11/2015            |
-
-#### Deprecated Versions
-
-Deprecated versions are stashed in case we want to reuse bits of those designs.
-
-* [Milan](http://github.com/caleorourke/turncoat/tree/milan)
-* [Lime](http://github.com/caleorourke/turncoat/tree/lime)
-* [Koala](http://github.com/caleorourke/turncoat/tree/koala)
-* [Jasper](http://github.com/caleorourke/turncoat/tree/jasper)
-* [Ion](http://github.com/caleorourke/turncoat/tree/ion)
-* [Halo](http://github.com/caleorourke/turncoat/tree/halo)
-* [Ginger](http://github.com/caleorourke/turncoat/tree/ginger)
-* [Frost](http://github.com/caleorourke/turncoat/tree/frost)
-* [Echo](http://github.com/caleorourke/turncoat/tree/echo)
-* [Dew](http://github.com/caleorourke/turncoat/tree/dew)
-* [Celsius](http://github.com/caleorourke/turncoat/tree/celsius)
-* [Black](http://github.com/caleorourke/turncoat/tree/black)
-* [Aurora](http://github.com/caleorourke/turncoat/tree/aurora)
 
 ## License
 
