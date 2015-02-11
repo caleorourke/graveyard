@@ -1,0 +1,118 @@
+---
+layout: default
+baseurl: "../"
+header: Alerts
+---
+
+<div class="col-md-12">
+  <h2>Alerts</h2>
+  <h4>Description goes here.</h4>
+
+  <div role="tabpanel">
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#warnings" aria-controls="warnings" role="tab" data-toggle="tab">Warnings</a></li>
+      <li role="presentation"><a href="#errors" aria-controls="errors" role="tab" data-toggle="tab">Errors</a></li>
+      <li role="presentation"><a href="#faults" aria-controls="faults" role="tab" data-toggle="tab">Faults</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="warnings">
+        <br>
+        <h4>New Alerts</h4>
+        <div class="panel-group" id="accordion-warnings" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-info">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h6 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion-warnings" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Packet loss % increased after last PING.
+                </a>
+                <br>
+                <small>Created on 12/13/15 at 01:23 UTC</small>
+              </h6>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+              </div>
+              <div class="panel-footer panel-buttons">
+                <a class="btn btn-default btn-flat" data-toggle="collapse">Read Later</a>
+                <button type="button" class="btn btn-success">Acknowledge</button>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h6 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion-warnings" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Packet discards are exceeding the threshold on one of more interfaces.
+                </a>
+                <br>
+                <small>Created on 12/18/14 at 13:57 UTC</small>
+              </h6>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                  Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+              <div class="panel-footer panel-buttons">
+                <a class="btn btn-default btn-flat" data-toggle="collapse">Read Later</a>
+                <button type="button" class="btn btn-success">Acknowledge</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <h4>Acknowledged Alerts</h4>
+        <div class="alert alert-default" role="alert">
+          Acknowledged alerts are stored in your <a href="{{page.baseurl}}logs">Event Logs</a>.
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="errors">
+        <br>
+        <h4>New Alerts</h4>
+        <div class="alert alert-default" role="alert">
+          You do not have any new alerts.
+        </div>
+        <br>
+        <h4>Acknowledged Alerts</h4>
+        <div class="alert alert-default" role="alert">
+          Acknowledged alerts are stored in your <a href="{{page.baseurl}}logs">Event Logs</a>.
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="faults">
+        <br>
+        <h4>New Alerts</h4>
+        <div class="panel-group" id="accordion-faults" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-danger">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h6 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion-faults" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Unable to collect poller data from the Monitoring Agent.
+                </a>
+                <br>
+                <small>Created on 12/30/14 at 07:07 UTC</small>
+              </h6>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body">
+                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+              </div>
+              <div class="panel-footer panel-buttons">
+                <a class="btn btn-default btn-flat" data-toggle="collapse">Read Later</a>
+                <button type="button" class="btn btn-success">Acknowledge</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <h4>Acknowledged Alerts</h4>
+        <div class="alert alert-default" role="alert">
+          Acknowledged alerts are stored in your <a href="{{page.baseurl}}logs">Event Logs</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,121 @@
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-9">
+      <h2>Gauges</h2>
+      <h4>Determine your absolute capacity instantly for each server component.</h4>
+    </div>
+
+    <div class="col-md-3">
+      <div class="pull-right">
+        <a class="btn btn-info" id="refresh"><i class="fa fa-refresh"></i> Refresh</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gauges">
+
+<!-- COMPUTE -->
+<div class="col-md-3">
+  <div class="panel panel-wrapper">
+    <div class="panel-heading">
+      <div>
+        <h6>COMPUTE</h6>
+      </div>
+    </div>
+    <canvas height="110" width="110" id="compute-indicator"></canvas>
+    <script>
+      var doughnutData = [
+        {value: 26, color: "#3b3e42"},
+        {value: 74, color: "#eff1f3"}
+      ];
+      var myDoughnut = new Chart(document.getElementById("compute-indicator").getContext("2d")).Doughnut(doughnutData);
+    </script>
+    <div class="text-right">
+      <div class="panel-huge-text">26<span>%</span></div>
+    </div>
+    <div class="panel-footer">
+      <span class="text-center"> Using 2.1 of 8.0 GHz</span>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MEMORY -->
+<div class="col-md-3">
+  <div class="panel panel-wrapper">
+    <div class="panel-heading">
+      <div>
+        <h6>MEMORY</h6>
+      </div>
+    </div>
+    <canvas height="110" width="110" id="memory-indicator"></canvas>
+    <script>
+      var doughnutData = [
+        {value: 57, color: "#3b3e42"},
+        {value: 43, color: "#eff1f3"}
+      ];
+      var myDoughnut = new Chart(document.getElementById("memory-indicator").getContext("2d")).Doughnut(doughnutData);
+    </script>
+    <div class="text-right">
+      <div class="panel-huge-text">57<span>%</span></div>
+    </div>
+    <div class="panel-footer">
+      <span class="text-center"> Using 18.2 of 32 GB</span>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+
+<!-- NETWORK -->
+<div class="col-md-3">
+  <div class="panel panel-wrapper">
+    <div class="panel-heading">
+      <div>
+        <h6>NETWORK</h6>
+      </div>
+    </div>
+    <canvas height="110" width="110" id="network-indicator"></canvas>
+    <script>
+      var doughnutData = [
+        {value: 18, color: "#3b3e42"},
+        {value: 82, color: "#eff1f3"}
+      ];
+      var myDoughnut = new Chart(document.getElementById("network-indicator").getContext("2d")).Doughnut(doughnutData);
+    </script>
+    <div class="text-right">
+      <div class="panel-huge-text">18<span>%</span></div>
+    </div>
+    <div class="panel-footer">
+      <span class="text-center"> Using 18 of 100 Mbps</span>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+
+<!-- STORAGE -->
+<div class="col-md-3">
+  <div class="panel panel-wrapper">
+    <div class="panel-heading">
+      <div>
+        <h6>STORAGE</h6>
+      </div>
+    </div>
+    <canvas height="110" width="110" id="storage-indicator"></canvas>
+    <script>
+      var doughnutData = [
+        {value: 78, color: "#3b3e42"},
+        {value: 22, color: "#eff1f3"}
+      ];
+      var myDoughnut = new Chart(document.getElementById("storage-indicator").getContext("2d")).Doughnut(doughnutData);
+    </script>
+    <div class="text-right">
+      <div class="panel-huge-text">78<span>%</span></div>
+    </div>
+    <div class="panel-footer">
+      <span class="text-center"> Using 27.3 of 35 GB</span>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+</div>

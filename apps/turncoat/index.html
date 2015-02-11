@@ -1,0 +1,13 @@
+---
+layout: default
+baseurl: "./"
+---
+
+{% include server.html %}
+{% include charts/gauges.html %}
+{% include logs/processes.html %}
+
+<!-- MODALS -->
+{% include modals/server/config.html %}
+{% include modals/server/select.html %}
+{% include modals/server/search.html %}

@@ -1,0 +1,62 @@
+/*
+ * Navbar
+ *
+ * Copyright © IBM Corporation.
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+.logo {
+  float: left;
+  margin-top: 13px;
+  margin-left: 31px;
+}
+
+.navbar-default {
+  min-height: 60px;
+}
+
+.navbar-fixed-top {
+  border-width: initial;
+}
+
+ul.menu > li {
+  float: left;
+  padding-left: 4px;
+
+  > a {
+    padding: 2px 5px;
+    font-size: 22px;
+    color: darken(@gray40,16%);
+    border: none !important;
+  }
+
+  > a:hover,
+  > a:focus,
+  > a.focus {
+    color: darken(@gray40,16%) !important;
+    background-color: transparent !important;
+  }
+}
+
+.navbar-menu {
+  float: right;
+  margin-top: 14.5px;
+  margin-right: 31px;
+
+  .badge,
+  .badge.counter {
+    padding: 3px 6px;
+    font-family: @font-family-base;
+    font-size: @font-size-small;
+    font-weight: @font-weight-bold;
+    background-color: @red;
+  }
+
+  .badge.counter {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    z-index: 100;
+  }
+}

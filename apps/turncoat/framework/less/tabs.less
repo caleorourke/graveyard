@@ -1,0 +1,34 @@
+/*
+ * Tabs
+ *
+ * Copyright © IBM Corporation.
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+.nav-tabs {
+  margin-bottom: 18px;
+  border-bottom: 1px solid transparent;
+
+  > li > a,
+  > li > a:hover,
+  > li > a:focus,
+  > li > a.focus {
+    font-weight: @font-weight-normal;
+    color: @gray40;
+    text-transform: uppercase;
+    letter-spacing: @letter-spacing-in-normal;
+    background-color: transparent !important;
+    border: none;
+  }
+
+  > li.active > a,
+  > li.active > a:hover,
+  > li.active > a:focus,
+  > li.active > a.focus {
+    color: @gray40;
+    cursor: default;
+    border: none;
+    box-shadow: inset 0 -3px 0 @gray70;
+  }
+}

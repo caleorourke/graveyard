@@ -1,0 +1,65 @@
+/*
+ * Dropdowns
+ *
+ * Copyright © IBM Corporation.
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+.dropdown-menu {
+  font-size: @font-size-medium-plus;
+  border-color: @gray70;
+  border-radius: @border-radius-small;
+
+  li > a {
+    padding: 8px 20px;
+    font-size: @font-size-medium;
+    text-transform: uppercase;
+  }
+}
+
+.dropdown-menu.extended {
+  top: 30px;
+  right: 0;
+  left: auto;
+  width: 250px !important;
+  min-width: 160px !important;
+  max-width: 300px !important;
+  padding: 0;
+  border: none !important;
+  border-radius: @border-radius-normal;
+  box-shadow: 0 2px 5px rgba(0,0,0,.26) !important;
+
+  li {
+    a:hover,
+    a:focus,
+    a.focus {
+      color: @gray20;
+      background-color: @white !important;
+    }
+
+    p {
+      padding: 10px;
+      margin: 0;
+      border-radius: @border-radius-normal @border-radius-normal 0 0;
+
+      &.menu-header {
+        color: @gray20;
+        background-color: @gray80;
+      }
+    }
+
+    div,a {
+      display: inline-block;
+      width: 100%;
+      padding: 15px 10px !important;
+      list-style: none;
+      border-bottom: 1px solid @gray70 !important;
+    }
+
+    a {
+      font-size: @font-size-medium;
+      text-transform: none !important;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{% if page.name == "usage.html" %}
+<script src="{{page.baseurl}}assets/js/morris.min.js"></script>
+<script src="{{page.baseurl}}assets/js/morris.data.js"></script>
+{% endif %}
+
+<script>
+  $(document).ready(function() {
+    $('#nav-accordion').dcAccordion();    /*-- Sidebar Accordion --*/
+    $('#datatables-example').dataTable(); /*-- Script for Tables --*/
+    $('#refresh').click(function() {      /*-- Server Reload --*/
+      location.reload();
+    });
+  });
+</script>

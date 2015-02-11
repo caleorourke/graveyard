@@ -1,0 +1,65 @@
+/*
+ * Buttons
+ *
+ * Copyright © IBM Corporation.
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+.btn {
+  font-size: @font-size-medium;
+  text-transform: uppercase;
+  transition: all .3s;
+
+  &.btn-default:hover,
+  &.btn-default:focus,
+  &.btn-default.focus {
+      color: @gray20;
+      background-color: inherit;
+  }
+}
+
+.btn-group {
+  &.open .dropdown-toggle {
+    box-shadow: inset 0 3px 5px @gray70;
+  }
+
+  > .btn:first-child {
+    border: 1px solid @gray70;
+    border-radius: @border-radius-normal;
+  }
+}
+
+.btn-fab {
+  width: 48px;
+  height: 48px;
+  margin: 0 0 0 7px;
+  font-size: @font-size-xlarge;
+  border-radius: @border-radius-round;
+  box-shadow: 0 1px 6px rgba(0,0,0,.12),0 1px 6px rgba(0,0,0,.12);
+}
+
+.btn-flat,
+.btn-flat:hover,
+.btn-flat:focus,
+.btn-flat.focus {
+  color: darken(@gray40,12%);
+  box-shadow: none;
+
+  &.danger {
+    color: @red;
+  }
+
+  &.danger:hover,
+  &.danger:focus,
+  &.danger.focus {
+    color: darken(@red,7%);
+  }
+}
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  filter: alpha(opacity=3);
+  opacity: .3;
+}

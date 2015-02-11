@@ -1,0 +1,92 @@
+<div class="col-md-12">
+  <div class="row">
+
+    <div class="col-md-9">
+      <h2>Processes</h2>
+      <h4>Monitor critical processes running on the backend of your server.</h4>
+    </div>
+
+    <div class="col-md-3">
+      <div class="pull-right">
+        <a class="btn btn-info" data-toggle="modal" data-target="#add-process"><i class="fa fa-plus"></i> Add Process</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-12 datatable">
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Directory</th>
+          <th>Uptime</th>
+          <th>CPU %</th>
+          <th>Memory</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><a data-toggle="modal" data-target="#httpd">httpd</a></td>
+          <td><code>./www</code></td>
+          <td><span class="text-center">4 days, 14 hours</span></td>
+          <td><span class="pull-right">4.2%</span></td>
+          <td><span class="pull-right">535 MB</span></td>
+        </tr>
+
+        <tr>
+          <td><a data-toggle="modal" data-target="#mysqld">mysqld</a></td>
+          <td><code>./db/mysql</code></td>
+          <td><span class="text-center">4 days, 14 hours</span></td>
+          <td><span class="pull-right">2.1%</span></td>
+          <td><span class="pull-right">46.4 MB</span></td>
+        </tr>
+
+        <tr>
+          <td><a data-toggle="modal" data-target="#nscd">nscd</a></td>
+          <td><code>./root</code></td>
+          <td><span class="text-center">0 days, 1 hour</span></td>
+          <td><span class="pull-right">0.6%</span></td>
+          <td><span class="pull-right">13.7 MB</span></td>
+        </tr>
+
+        <tr>
+          <td><a data-toggle="modal" data-target="#sshd">sshd</a></td>
+          <td><code>./root</code></td>
+          <td><span class="text-center">4 days, 14 hours</span></td>
+          <td><span class="pull-right">0.3%</span></td>
+          <td><span class="pull-right">10.4 MB</span></td>
+        </tr>
+
+        <tr>
+          <td><a data-toggle="modal" data-target="#configd">svc.configd</a></td>
+          <td><code>./root</code></td>
+          <td><span class="text-center">2 days, 3 hours</span></td>
+          <td><span class="pull-right">0.4%</span></td>
+          <td><span class="pull-right">12 MB</span></td>
+        </tr>
+
+        <tr>
+          <td><a class="text-danger" data-toggle="modal" data-target="#devd">svc.devd</a></td>
+          <td><code class="text-danger">./dev</code></td>
+          <td><span class="text-center text-danger">---</span></td>
+          <td><span class="pull-right text-danger">---</span></td>
+          <td><span class="pull-right text-danger">---</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- FORMS -->
+{% include forms/add-process.html %}
+
+<!-- MODALS -->
+{% include modals/processes/httpd.html %}
+{% include modals/processes/mysqld.html %}
+{% include modals/processes/nscd.html %}
+{% include modals/processes/sshd.html %}
+{% include modals/processes/svc.configd.html %}
+{% include modals/processes/svc.devd.html %}
