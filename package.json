@@ -1,37 +1,37 @@
 {
-    "name": "pluck",
-    "description": "A gang of JS plugins that've caused hairlines to recede.",
-    "homepage": "https://github.com/caleorourke/pluck",
-    "keywords": [
-        "analytics",
-        "blur",
-        "classify",
-        "easing",
-        "indexing",
-        "jekyll-pages",
-        "pegging",
-        "profile",
-        "reading",
-        "toggle"
-    ],
-    "maintainers": [
-        {
-            "name": "Michael O'Rourke",
-            "email": "morourke@softlayer.com"
-        }
-    ],
-   "roster": [
-       {
-           "analytics":    "https://github.com/caleorourke/pluck/blob/master/analytics.js",
-           "blur":         "https://github.com/caleorourke/pluck/blob/master/blur.js",
-           "classify":     "https://github.com/caleorourke/pluck/blob/master/classify.js",
-           "easing":       "https://github.com/caleorourke/pluck/blob/master/easing.js",
-           "indexing":     "https://github.com/caleorourke/pluck/blob/master/indexing.js",
-           "jekyll-pages": "https://github.com/caleorourke/pluck/blob/master/jekyll-pages",
-           "pegging":      "https://github.com/caleorourke/pluck/blob/master/pegging.js",
-           "profile":      "https://github.com/caleorourke/pluck/blob/master/profile.js",
-           "reading":      "https://github.com/caleorourke/pluck/blob/master/reading.js",
-           "toggle":       "https://github.com/caleorourke/pluck/blob/master/toggle.js"
-       }
-   ]
+  "name": "pluck",
+  "description": "A gang of JS plugins that've caused hairlines to recede.",
+  "homepage": "https://github.com/caleorourke/pluck",
+  "keywords": [
+    "analytics",
+    "blur",
+    "classify",
+    "easing",
+    "indexing",
+    "jekyll-pages",
+    "pegging",
+    "profile",
+    "reading",
+    "toggle"
+  ],
+  "maintainers": [
+  {
+    "name": "Michael O'Rourke",
+    "email": "morourke@softlayer.com"
+  }
+  ],
+  "roster": [
+  {
+    "analytics":    "https://github.com/caleorourke/pluck/blob/master/analytics.js",
+    "blur":         "https://github.com/caleorourke/pluck/blob/master/blur.js",
+    "classify":     "https://github.com/caleorourke/pluck/blob/master/classify.js",
+    "easing":       "https://github.com/caleorourke/pluck/blob/master/easing.js",
+    "indexing":     "https://github.com/caleorourke/pluck/blob/master/indexing.js",
+    "jekyll-pages": "https://github.com/caleorourke/pluck/blob/master/jekyll-pages",
+    "pegging":      "https://github.com/caleorourke/pluck/blob/master/pegging.js",
+    "profile":      "https://github.com/caleorourke/pluck/blob/master/profile.js",
+    "reading":      "https://github.com/caleorourke/pluck/blob/master/reading.js",
+    "toggle":       "https://github.com/caleorourke/pluck/blob/master/toggle.js"
+  }
+  ]
 }
