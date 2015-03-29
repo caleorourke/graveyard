@@ -1,0 +1,40 @@
+<!-- Fetches contributors, stargazers and latest version from GitHub -->
+<script>
+  var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  $.getJSON('https://api.github.com/repos/' + '{{site.github.user.name}}/' + '{{site.github.user.repo}}/' + 'contributors?callback=?', function(result) {
+    numContributors = result.data;
+    $(function() {
+      $('#js-github-contributors').text(numContributors.length);
+    });
+  });
+
+  $.ajax({
+    url: 'https://api.github.com/repos/' + '{{site.github.user.name}}/' + '{{site.github.user.repo}}' + '?callback?',
+    dataType: 'jsonp',
+    success: function(json) {
+      numStargazers = json.data;
+      $('#js-github-stargazers').text(numStargazers.stargazers_count);
+    }
+  });
+
+  $.ajax({
+    url: 'https://api.github.com/repos/' + '{{site.github.user.name}}/' + '{{site.github.user.repo}}/' + 'tags?callback?',
+    dataType: 'jsonp',
+    success: function(json) {
+      latestVersion = json.data[0];
+      $('#js-github-version').text(latestVersion.name);
+    }
+  });
+
+  $.ajax({
+    url: 'https://api.github.com/repos/' + '{{site.github.user.name}}/' + '{{site.github.user.repo}}/' + 'commits?state=closed/callback?',
+    dataType: 'jsonp',
+    success: function (json) {
+      lastCommit = json.data[0];
+      stamp = new Date(lastCommit.commit.committer.date),
+      stampString = month[stamp.getMonth()] + ' ' + stamp.getDate();
+      $('#js-github-commit').text(stampString);
+    }
+  });
+</script>
