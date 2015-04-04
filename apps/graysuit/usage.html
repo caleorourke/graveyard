@@ -1,0 +1,21 @@
+---
+layout: default
+baseurl: "../"
+header: Usage
+---
+
+<div class="col-md-12">
+  <div class="usage">
+    <h2>Usage</h2>
+    <h4>Description goes here.</h4>
+
+    <img src="{{page.baseurl}}assets/img/monitoring-graphs.png" alt="Monitoring Graphs">
+  </div>
+
+  <div class="activity">
+    <h2>Activity</h2>
+    <h4>Analyze your current activity and identify gaps in coverage over multiple points in time.</h4>
+
+    {% include charts/activity.html %}
+  </div>
+</div>

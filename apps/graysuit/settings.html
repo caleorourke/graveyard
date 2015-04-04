@@ -1,0 +1,62 @@
+---
+layout: default
+baseurl: "../"
+header: Settings
+---
+
+<div class="col-md-12">
+  <h2>Settings</h2>
+  <h4>Description goes here.</h4>
+
+    <div role="tabpanel">
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Options</a></li>
+        <li role="presentation"><a href="#defaults" aria-controls="defaults" role="tab" data-toggle="tab">Defaults</a></li>
+        <li role="presentation"><a href="#thresholds" aria-controls="thresholds" role="tab" data-toggle="tab">Thresholds</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="settings">
+          <br>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> This is my option. There are many like it, but this one is mine.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> This is my other option. There are many like it, but this one is also mine.
+            </label>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="defaults">
+          <br>
+          <p>...</p>
+          <h4>Default Notifications</h4>
+          <p>...</p>
+
+          <h4>Default Server</h4>
+          <p>Find a server and click "Make default server" if you want us to open it automatically for you.</p>
+          <div class="input-group shortened">
+            <input type="text" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+            </span>
+          </div>
+          <div class="checkbox">
+            <label>
+              <small><input type="checkbox"> Make default server</small>
+            </label>
+          </div>
+          <small class="text-warning"><i class="fa fa-info-circle"></i> Your default server is <strong>centos7vs</strong>. This setting will be overridden if you pick a different default server.</small>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="thresholds">
+          <br>
+          <p>...</p>
+      </div>
+
+    </div>
+  </div>
+</div>

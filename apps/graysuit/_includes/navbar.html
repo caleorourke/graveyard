@@ -1,0 +1,38 @@
+<header class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <nav class="collapse navbar-collapse">
+      <a class="logo" href="{{page.baseurl}}">
+        <img src="{{page.baseurl}}assets/img/IBM.png" height="34" width="95" alt="SoftLayer, an IBM Company">
+      </a>
+      <div class="nav navbar-menu">
+        <ul class="menu">
+
+          <!-- ALERTS -->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-envelope"></i><span class="badge counter">3</span></a>
+            <ul class="dropdown-menu extended">
+              <li><p class="menu-header">You have <strong>3</strong> new alerts</p></li>
+              <li><div><i class="fa fa-warning fa-fw"></i> Warnings<span class="pull-right badge">2</span></div></li>
+              <li><div><i class="fa fa-warning fa-fw"></i> Errors<span class="pull-right badge"></span></div></li>
+              <li><div><i class="fa fa-warning fa-fw"></i> Faults<span class="pull-right badge">1</span></div></li>
+              <li><a class="text-center" href="{{page.baseurl}}alerts">See all alerts<i class="fa fa-angle-right fa-fw"></i></a></li>
+            </ul>
+          </li>
+
+          <!-- USER -->
+          <li class="dropdown">
+            <a class="dropdown-toggle user-selection" data-toggle="dropdown" href="#"><i class="fa fa-user"></i></a>
+            <ul class="dropdown-menu extended">
+              <li><p class="menu-header">You're signed in as <strong>vsadmin</strong></p></li>
+              <li><a href="{{page.baseurl}}profile"><i class="fa fa-user fa-fw"></i> Profile</a></li>
+              <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Sign Out</a></li>
+            </ul>
+          </li>
+
+          <!-- SUPPORT -->
+          <li class="dropdown"><a href="{{page.baseurl}}support"><i class="fa fa-question-circle"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

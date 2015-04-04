@@ -1,0 +1,48 @@
+/*
+ * Sidebar
+ *
+ * Copyright © IBM Corporation.
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+.sidebar ul li {
+  position: relative;
+}
+
+ul.sidebar-menu {
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-size: @font-size-normal;
+
+  li {
+    margin-bottom: 25px;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    > a {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    ul.sub {
+      padding-bottom: 0;
+      padding-left: 20px;
+      margin-top: 25px;
+      margin-bottom: 0;
+
+      li a {
+        font-size: @font-size-normal;
+      }
+    }
+
+    a {
+      color: @gray20;
+    }
+  }
+}

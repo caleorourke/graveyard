@@ -1,0 +1,37 @@
+/*
+ * Charts
+ *
+ * Copyright © IBM Corporation.
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+#morris-line-chart {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.morris-hover {
+  position: absolute;
+  z-index: 1000;
+}
+
+.morris-hover.morris-default-style {
+  padding: 5px;
+  font-size: @font-size-medium;
+  color: @gray40;
+  text-align: center;
+  background: rgba(255,255,255,.8);
+  border: 2px solid rgba(230,230,230,.8);
+  border-radius: @border-radius-large;
+
+  .morris-hover-row-label {
+    margin: .25em 0;
+    font-weight: @font-weight-bold;
+  }
+
+  .morris-hover-point {
+    margin: .1em 0;
+    white-space: nowrap;
+  }
+}

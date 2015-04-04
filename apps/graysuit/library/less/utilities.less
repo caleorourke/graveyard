@@ -1,0 +1,64 @@
+/*
+ * Utilities
+ *
+ * Copyright © IBM Corporation.
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+.text-center {
+  display: block;
+}
+
+.text-danger {
+  color: @red;
+}
+
+a.text-danger:hover,
+a.text-danger:focus,
+a.text-danger.focus {
+  color: darken(@red,7%);
+}
+
+.text-warning {
+  color: @red;
+}
+
+ul.pagination {
+  float: right;
+  margin: 0 0 20px 0;
+  font-size: @font-size-medium;
+}
+
+code {
+  padding: 0;
+  font-size: @font-size-medium;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+.close {
+  font-size: 34px;
+  font-weight: @font-weight-light;
+  line-height: 24px;
+}
+
+.list-group {
+  margin-bottom: 12px;
+}
+
+.shortened {
+  width: 50%;
+}
+
+.alert-default {
+  color: @gray20;
+  background-color: @gray90;
+  border-color: transparent;
+}
+
+.list-group-item, a.list-group-item.active {
+  padding: 10px 15px;
+  font-size: 15px;
+}

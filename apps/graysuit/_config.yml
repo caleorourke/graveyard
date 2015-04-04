@@ -1,0 +1,19 @@
+github:
+  name:     Graysuit
+  tagline:  Blueprints for defining visual data artifacts
+  license:  MIT
+permalink:  pretty
+exclude:   ["assets/img/ideation",
+            "assets/img/blueprints",
+            "assets/css/config.json",
+            "library",
+            "node_modules",
+            ".gitignore",
+            "Gruntfile.js",
+            "LICENSE",
+            "package.json",
+            "README.md",
+            "validation-*.json"
+            ]
+gems:
+  - jekyll-sitemap

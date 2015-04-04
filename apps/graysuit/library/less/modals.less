@@ -1,0 +1,63 @@
+/*
+ * Modals
+ *
+ * Copyright © IBM Corporation.
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+.modal {
+  border: none;
+  border-radius: @border-radius-normal;
+  box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+}
+
+h4.modal-title {
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: @font-weight-normal;
+  letter-spacing: 0;
+}
+
+.modal-header {
+  padding: 25px 30px 5px 30px;
+  border-bottom: none;
+
+  .close {
+    margin-top: -5px;
+    margin-right: -7px;
+  }
+}
+
+.modal-body {
+  padding: 15px 30px;
+
+  div code {
+    font-size: @font-size-medium;
+  }
+}
+
+.modal-content {
+  border-color: transparent;
+}
+
+.modal-footer {
+  border-top-color: transparent;
+}
+
+/*body .modal-open[style],
+header .modal-open[style] {
+  padding-right: -15px !important;
+}*/
+
+/*.modal {
+    overflow-y: auto;
+}*/
+
+.modal-open {
+    overflow: auto;
+}
+
+.modal-open[style] {
+  padding-right: 0 !important;
+}
