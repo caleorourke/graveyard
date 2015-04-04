@@ -1,0 +1,535 @@
+a img {
+  border: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Quando', serif;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: center;
+  /*background: url('../img/bg-pattern-black.png') repeat;*/
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+div.layout {
+  padding: 0;
+  margin: 0;
+}
+
+aside {
+  background-color: rgba(255, 255, 255, .1);
+}
+
+aside > * {
+  padding: 15px 0;
+  margin: 0 15px;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.mobile {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  float: left;
+  width: 320px;
+  height: 100%;
+  font-family: 'Acme', sans-serif;
+  color: rgba(0,0,0,.55);
+  text-align: left;
+  text-transform: uppercase;
+  background: url(bg-pattern-green.png) repeat;
+  -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, .75);
+     -moz-box-shadow: 2px 2px 5px rgba(50, 50, 50, .75);
+          box-shadow: 2px 2px 5px rgba(50, 50, 50, .75);
+}
+
+::selection {
+  background: rgba(24, 106, 12,.7); /* Safari */
+}
+
+::-moz-selection {
+  background: rgba(24, 106, 12,.7); /* Firefox */
+}
+
+/* =========================
+   Sidebar Nav
+   ========================= */
+
+ul.nav {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  list-style: none outside none;
+}
+
+ul.nav.sub {
+  display: none;
+  background/*\**/: url(img/bg/black_30.png)\9;
+  background-color: rgba(0,0,0,.3);
+}
+
+ul.nav.sub.active {
+  display: block;
+}
+
+ul.nav li {
+  padding-left: 2em;
+  line-height: 40px;
+  list-style: none outside none;
+  transition-duration: .7s;
+  transition-property: background-color, padding-left;
+}
+
+ul.nav.sub li {
+  padding-left: 2.8em;
+}
+
+ul.nav li:hover {
+  padding-left: 2.5em;
+  background/*\**/: url(img/bg/white_20.png)\9;
+  background-color: rgba(255,255,255,.2);
+
+  *background: url(img/bg/white_20.png);
+}
+
+ul.nav li.active {
+  background/*\**/: url(img/bg/white_20.png)\9;
+  background-color: rgba(255,255,255,.1);
+
+  *background: url(img/bg/white_20.png);
+}
+
+ul.nav a, ul.nav a:link, ul.nav a:active, ul.nav a:visited, ul.nav a:hover, ul.nav a:focus {
+  font-size: 1.5em;
+  color: rgb(31,52,4);
+  text-decoration: none;
+}
+
+.main {
+  position: static;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.header {
+  display: none;
+}
+
+.header, .content, .footer {
+  width: 700px;
+  max-width: 700px;
+  padding: 3.5em 5em;
+  margin: 30px;
+  color: rgba(255,255,255,.9);
+  color/*\**/: rgb(250,250,250)\9;
+  background: rgba(0,0,0,.9);
+  background/*\**/: url(../img/bg/black_40.png)\9;
+  -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, .75);
+     -moz-box-shadow: 2px 2px 5px rgba(50, 50, 50, .75);
+          box-shadow: 2px 2px 5px rgba(50, 50, 50, .75);
+}
+
+.main a, .main  a:link, .main  a:active, .main  a:visited {
+  color: #367e20;
+  text-decoration: none;
+}
+
+.main  a:hover, .main  a:focus {
+  color: #367e20;
+  text-decoration: underline;
+}
+
+.content {
+  min-height: 400px;
+}
+
+.logo {
+  display: block;
+  width: 220px;
+  margin: 30px auto 10px auto;
+}
+
+.social {
+  font-family: 'Socialico';
+  font-size: 40px;
+  line-height: 55px;
+  text-align: center;
+  text-transform: none;
+  vertical-align: top;
+}
+
+.social a, .social  a:link, .social a:active, .social a:visited, .social a:hover, .social a:focus {
+  color: rgba(0,0,0,.55);
+  text-decoration: none;
+  transition-duration: .3s;
+  transition-property: opacity;
+}
+
+.social a:hover {
+  opacity: .8;
+}
+
+/* =========================
+   Boxes
+   ========================= */
+
+.box2, .box3 {
+  display: inline-block;
+  margin-right: 5px !important;
+  vertical-align: top;
+}
+
+.box2 {
+  width: 50%;
+  max-width: 320px;
+}
+
+.box3 {
+  width: 33%;
+  max-width: 205px;
+}
+
+div + .box2, div + box3 {
+  margin: 5px !important;
+}
+
+.portfolio-tile {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: rgba(0,0,0,.5);
+  border: 1px solid rgba(0,0,0,.5);
+}
+
+.portfolio-tile:hover {
+  opacity: .8;
+}
+
+.portfolio-tile div {
+  position: relative;
+  top: 165px;
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  line-height: 25px;
+  visibility: hidden;
+  background: rgba(0,0,0,.6);
+  background-size: 100%;
+}
+
+.portfolio-tile:hover div {
+  visibility: visible;
+}
+
+span.portfolio-label {
+  display: block;
+  height: 35px;
+  margin: auto 10px;
+  line-height: 35px;
+  color: #fff !important;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 1500px) {
+  .main {
+    position: absolute;
+    left: 320px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .box2 {
+    width: 45%;
+  }
+
+  .box3 {
+    width: 27%;
+  }
+
+  .portfolio-tile {
+    width: 175px;
+    height: 175px;
+  }
+
+  .portfolio-tile div {
+    top: 140px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .portfolio-tile {
+    width: 150px;
+    height: 150px;
+    margin: 0 7px 7px 0;
+  }
+
+  .portfolio-tile div {
+    top: 115px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .portfolio-tile {
+    position: relative;
+    left: 50%;
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+  }
+
+  .portfolio-tile div {
+    top: 165px;
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .box2 {
+    width: 42%;
+  }
+
+  .box3 {
+    width: 25%;
+  }
+}
+
+/* =========================
+   Tables
+   ========================= */
+
+table {
+  width: 100%;
+  padding: 0;
+  margin: .5em 0 !important;
+  overflow: auto;
+  color: rgba(0,0,0,.9);
+  border-spacing: 0;
+  background-color: rgb(255,255,255);
+}
+
+td {
+  padding: 1em;
+  margin: 0;
+}
+
+thead {
+  font-weight: bold;
+  text-transform: uppercase;
+  background: url(bg-pattern-green.png) repeat;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #efefef;
+}
+
+/* =========================
+   Forms
+   ========================= */
+
+input, select, textarea {
+  padding: .4em;
+  margin: .4em;
+}
+
+input[type=button], input[type=submit] {
+  color: #fff;
+  text-transform: uppercase;
+  background: #326a21;
+  border: none;
+  /*font-family: 'Acme',sans-serif;*/
+  border-radius: 15px;
+}
+
+input[type=text], input[type=password], textarea {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .3) inset;
+}
+
+input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus {
+  cursor: pointer;
+  background: #367e20;
+}
+
+input[type=text]:hover, input[type=text]:focus, input[type=password]:hover, input[type=password]:focus, textarea:hover, textarea:focus {
+  border: 1px solid #009600;
+}
+
+/* =========================
+   Swipe.js
+   ========================= */
+
+.swipe {
+  margin: 1em 0;
+}
+
+.swipe ul {
+  padding: 0;
+}
+
+.swipe li div {
+  padding: 1em;
+  background: rgba(255,255,255,.2);
+  border-radius: 8px;
+}
+
+/* =========================
+   Viewports
+   ========================= */
+
+@media screen and (max-width: 1050px) {
+  .main {
+    background: rgba(0,0,0,.4);
+    background/*\**/: url(img/bg/black_40.png)\9;
+    background-attachment: fixed;
+  }
+
+  .header, .content, .footer {
+    width: auto;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    background: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html, body {
+    height: auto;
+  }
+
+  .main {
+    background: none;
+  }
+
+  body {
+    background: rgba(0,0,0,.4);
+    background/*\**/: url(img/bg/black_40.png)\9;
+  }
+
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .nomobile {
+    display: none !important;
+  }
+
+  .logo {
+    width: auto;
+    height: 90px;
+    margin: 5px auto 5px auto;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .header, .content, .footer {
+    max-width: 650px;
+    padding: 5px 0;
+    margin: 0;
+  }
+
+  .main {
+    position: relative;
+    left: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .header > *, .content > *, .footer > * {
+    margin: 5px 10px;
+  }
+  .footer {
+    position: relative;
+    height: 40px;
+    margin-bottom: 0;
+  }
+
+  ul.nav {
+    margin: 0;
+    text-align: center;
+  }
+
+  ul.nav.sub {
+    margin: 0 auto;
+    background: rgba(0,0,0,.4);
+  }
+
+  ul.nav li, ul.nav.sub li {
+    display: inline-block;
+    padding: 0 .5em;
+    margin: 0;
+    background: none;
+  }
+
+  ul.nav li:hover, ul.nav.sub li:hover {
+    padding: 0 .5em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  ul.nav.sub li {
+    display: block;
+  }
+
+  .box2, .box3 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  ul.nav li {
+    padding: 0 .3em;
+    margin: 0;
+  }
+
+  ul.nav li:hover, ul.nav.sub li:hover {
+    padding: 0 .3em;
+  }
+}

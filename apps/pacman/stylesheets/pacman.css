@@ -1,0 +1,300 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  background-color: #000;
+}
+
+.main a, .main a:link, .main a:active, .main a:visited {
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  background: #c80a0a;
+}
+
+* {
+  box-shadow: none !important;
+}
+
+.content, h1, h2, h3, p, div {
+  font-family: 'Press Start 2P', cursive;
+  font-weight: normal;
+}
+
+.content[id*=-content]:not(#game-content) {
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.button {
+  padding: 8px;
+  cursor: pointer;
+  background: #c80a0a;
+}
+
+.button:hover {
+  background: #c80a0a;
+}
+
+#menu-buttons .button {
+  background: transparent;
+}
+
+#menu-buttons .button:hover {
+  background: rgba(255,255,255,.15);
+}
+
+.button#back {
+  position: relative;
+  top: -25px;
+  display: inline-block;
+}
+
+.button#score-submit {
+  vertical-align: middle;
+}
+
+#highscore-form {
+  margin-top: 8px;
+}
+
+input[type="text"]:hover, input[type="text"]:focus, input[type="password"]:hover, input[type="password"]:focus, textarea:hover, textarea:focus {
+  border: 1px #c80a0a solid;
+}
+
+#score {
+  float: right;
+}
+
+#myCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: rgb(0,0,0);
+  border: none;
+}
+
+#canvas-container {
+  position: relative;
+}
+
+#canvas-overlay-container {
+  position: absolute;
+  width: 540px;
+  max-width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.7);
+  cursor: pointer;
+}
+
+#canvas-overlay-content {
+  position: absolute;
+  top: 33%;
+  left: 0;
+  width: 540px;
+  max-width: 100%;
+  max-width: 100%;
+  margin-top: 0;
+  text-align: center;
+}
+
+#canvas-overlay-content #title {
+  font-size: 160%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.canvas {
+  position: absolute;
+  padding-top: 20px;
+}
+
+.main {
+  position: static;
+  left: auto;
+  width: 100%;
+  max-width: 660px;
+  margin: 10px auto;
+}
+
+.content {
+  width: 100%;
+  max-width: 540px;
+  margin: 0;
+  text-align: left;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.wrapper {
+  padding: 0;
+}
+
+.game {
+  max-width: 540px;
+  margin: auto;
+}
+
+.about {
+  display: none;
+  margin-top: 20px;
+  font-size: 10px;
+  text-align: center;
+}
+
+body, html {
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+audio {
+  display: block;
+}
+
+.score {
+  width: 180px;
+}
+
+.score, .lives {
+  display: inline-block;
+}
+
+.controls {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.controls-section {
+  display: inline-block;
+  width: 47%;
+  height: auto;
+  margin: 0;
+  text-align: left;
+}
+
+.controls-right .controlButton {
+  position: relative;
+  right: -65%;
+}
+
+/* Arrow Keys - only displayed when game isn't paused */
+#game-buttons {
+  display: none;
+}
+
+/* Game Menu - displayed when game is paused */
+#menu-buttons ul, .controls#menu-buttons ul li {
+  padding: 0;
+  list-style: none;
+  letter-spacing: -0.02em;
+}
+
+#menu-buttons ul li {
+  height: 40px;
+  font-size: 110%;
+  line-height: 40px;
+}
+
+.controlSound {
+  position: relative;
+  bottom: 5px;
+  float: right;
+  width: 73px;
+  width: 36px;
+  height: 50px;
+  height: 25px;
+  background: url('../images/audio-icon.png');
+  background-size: 100%;
+}
+
+#mute {
+  display: none;
+  width: 36px;
+  height: 25px;
+}
+
+.controlButton {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 50px;
+  cursor: pointer;
+  background: none repeat scroll 0 0 #c80a0a;
+  border-radius: 50%;
+}
+
+.controlButton:hover, .controlButton:active {
+  background: #c00202;
+}
+
+.description {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  html, body {
+    background: rgb(0,0,0);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .game {
+    width: 93%;
+  }
+
+  .content {
+    max-width: none;
+  }
+
+  #menu-buttons .button {
+    background: rgba(255,255,255,.1);
+  }
+
+  .button:hover {
+    background: rgba(255,255,255,.1);
+  }
+
+  .button#back {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nomobile {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  html, body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .main {
+    margin: 10px auto;
+  }
+
+  .content {
+    min-height: 0;
+  }
+
+  .controlButton {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .controls-right .controlButton {
+    right: -55%;
+  }
+}

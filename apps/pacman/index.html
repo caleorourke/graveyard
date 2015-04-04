@@ -1,0 +1,96 @@
+---
+layout: default
+baseurl: "./"
+---
+
+<div class="container">
+  <div class="main">
+
+    <!-- Display this message if Javascript is disabled -->
+    <noscript>
+      <h2>Enable Javascript!</h2>
+      <p>This HTML5 app requires Javascript to run. Please check that Javascript is enabled in your browser.</p>
+    </noscript>
+
+    <!-- Instructions -->
+    <div class="content" id="instructions-content">
+      <div class="button" id="back">back</div>
+      <div>
+        <h1>Instructions</h1>
+        <div class="nomobile">
+          <p>Use your arrow keys or [W,A,S,D] keys to drive Pacman.</p>
+          <p>To pause / resume the game, press [SPACE] or [ESC] or click the game area.</p>
+        </div>
+        <div class="mobile">
+          <p>Use swipe gestures to navigate pacman.</p>
+          <p>Alternatively, use the Arrow Buttons underneath the game area.</p>
+          <p>To pause/resume the game, touch the game area once.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume cleanup here -->
+
+      <!-- Main Game Content -->
+      <div class="content" id="game-content">
+        <div class="game wrapper">
+          <div class="score">Score:</div>
+          <div class="lives">Lives:</div>
+          <div class="controlSound">
+            <img src="../images/audio-icon-mute.png" id="mute">
+          </div>
+
+          <!-- Canvas is splitted into 18x13 fields -->
+          <div id="canvas-container">
+            <div id="canvas-overlay-container">
+              <div id="canvas-overlay-content">
+                <div id="title">Pacman</div>
+                <div><p id="text">Click to Play</p></div>
+              </div>
+            </div>
+            <canvas id="myCanvas" width="540" height="390">
+              <p>Canvas not supported</p>
+            </canvas>
+          </div>
+
+          <div class="controls" id="game-buttons">
+            <div>
+              <span id="up" class="controlButton">&uarr;</span>
+            </div>
+            <div>
+              <span id="left" class="controlButton">&larr;</span>
+              <span id="down" class="controlButton">&darr;</span>
+              <span id="right" class="controlButton">&rarr;</span>
+            </div>
+          </div>
+
+          <!-- Game Menu -->
+          <div class="controls" id="menu-buttons">
+            <ul>
+              <li class="button" id="newGame">New Game</li>
+              <li class="button" id="instructions">Instructions</li>
+            </ul>
+          </div>
+        </div>
+
+        <span id="audio">
+          <audio id="theme" preload="auto">
+            <source src="../audio/theme.wav" type="audio/wav">
+            <source src="../audio/theme.mp3" type="audio/mpeg">
+          </audio>
+          <audio id="waka" preload="auto">
+            <source src="../audio/waka.wav" type="audio/wav">
+            <source src="../audio/waka.mp3" type="audio/mpeg">
+          </audio>
+          <audio id="die" preload="auto">
+            <source src="../audio/die.wav" type="audio/wav">
+            <source src="../audio/die.mp3" type="audio/mpeg">
+          </audio>
+          <audio id="powerpill" preload="auto">
+            <source src="../audio/powerpill.wav" type="audio/wav">
+            <source src="../audio/powerpill.mp3" type="audio/mpeg">
+          </audio>
+        </span>
+      </div>
+    </div>
+  </div>

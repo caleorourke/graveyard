@@ -1,0 +1,6 @@
+author:     platzh1rsch.ch
+permalink:  pretty
+exclude:   [".gitignore",
+            "Gemfile",
+            "README.md"
+            ]
