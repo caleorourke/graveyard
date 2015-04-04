@@ -1,0 +1,43 @@
+---
+layout: landing
+title: index
+baseurl: "./"
+---
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="col-md-6 col-md-offset-3">
+      <h1 class="name">{{site.github.name}}</h1>
+      <h2 class="tagline">{{site.github.tagline}}.</h2>
+    </div>
+  </div>
+</section>
+
+<hr class="full-width">
+
+<!-- Partials -->
+<section class="panel-collection">
+  <div class="container">
+    <div class="col-md-12">
+      {% include panels/panel-order-1.html %}
+      {% include panels/panel-order-2.html %}
+      {% include panels/panel-order-3.html %}
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="col-md-12">
+      {% include panels/panel-order-4.html %}
+      {% include panels/panel-order-5.html %}
+      {% include panels/panel-order-6.html %}
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="col-md-12">
+      {% include panels/panel-order-7.html %}
+      {% include panels/panel-order-8.html %}
+    </div>
+  </div>
+</section>

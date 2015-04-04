@@ -1,0 +1,63 @@
+#
+# * Config
+# * Stores static configuration and project info
+# *
+# * Copyright © Michael O'Rourke (@caleorourke)
+# * Code and documentation licensed under the MIT License
+#
+
+# ==============================
+# Project
+# ==============================
+
+github:
+  name:       Orange
+  tagline:    Practical concepts to improve how you make products
+  license:    MIT
+keywords:     "agile,cale o'rourke,charter,command-control-execute,content,design,essentials,framework,kaizen,kanban,lean,lifecycle,methodology,michael o'rourke,practical,pragmatic,pragmatic marketing,product,productization,product management,product teams,project management,responsibilities,roles,scaffolding,scrum,strategy,tactics,vision,zen"
+
+# ==============================
+# Author
+# ==============================
+
+author:       "Michael (Cale) O'Rourke"
+website:      http://medium.com/@caleorourke
+twitter:
+  handle:     CaleORourke
+  hashtags:   "products,lean,agile"
+  text:       "Learn practical concepts to improve how you make products"
+
+# ==============================
+# Markdown
+# ==============================
+
+markdown:     redcarpet
+redcarpet:
+  extensions: ["autolink",
+               "highlight",
+               "lax_spacing",
+               "smart",
+               "strikethrough",
+               "superscript",
+               "tables",
+               "underline",
+               "with_toc_data"]
+
+# ==============================
+# Server
+# ==============================
+
+baseurl:      /orange
+encoding:     UTF-8
+permalink:    pretty
+exclude:      [".csscomb.json",
+               ".gitignore",
+               "Gruntfile.js",
+               "framework",
+               "node_modules",
+               "package.json",
+               "pages/drafts.md",
+               "validation*.json"]
+
+gems:
+  - jekyll-sitemap

@@ -1,0 +1,41 @@
+<!-- Head -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+
+{% if page.header == null %}
+  {{site.github.name}}
+{% else %}
+  {{page.header}} &middot; {{site.github.name}}
+{% endif %}
+
+</title>
+<meta name="description" content="{{site.github.tagline}}">
+<meta name="keywords" content="{{site.keywords}}">
+<meta name="author" content="{{site.author}}">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- References -->
+<link href="{{page.baseurl}}sitemap.xml" rel="sitemap" type="application/xml" title="Sitemap">
+<link href="{{page.url | replace:"index.html","" | prepend: site.baseurl | prepend: site.url}}" rel="canonical">
+
+<!-- Stylesheet -->
+<link href="{{page.baseurl}}assets/css/orange.min.css" rel="stylesheet">
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Typekit -->
+<script src="//use.typekit.net/ump5fue.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+<!-- Icons -->
+<link href="{{page.baseurl}}assets/img/favicon.ico" rel="shortcut icon" sizes="32x32">
+<link href="{{page.baseurl}}assets/img/apple-touch-icon.png" rel="shortcut icon" sizes="196x196"> <!-- Android -->
+<link href="{{page.baseurl}}assets/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="144x144"> <!-- Apple -->
+
+  <!--[if lt IE 8]>
+    <p>You are using an <strong>outdated browser</strong>. Please <a href="http://browsehappy.com/">upgrade your browser</a> to a newer version or use a different browser, such as Chrome or Firefox.</p>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <![endif]-->

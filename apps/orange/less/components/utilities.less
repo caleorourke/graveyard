@@ -1,0 +1,92 @@
+/*
+ * Utilities
+ *
+ * Copyright © Michael O'Rourke (@caleorourke).
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+/* =========================
+   Views
+   ========================= */
+
+@view-xs:       480px;
+@view-sm:       768px;
+@view-md:       992px;
+@view-lg:       1200px;
+
+@view-xs-max:   (@view-sm - 1);
+@view-sm-max:   (@view-md - 1);
+@view-md-max:   (@view-lg - 1);
+
+/* =========================
+   Container Sizes
+   ========================= */
+
+@container-sm:  (720px + 30px);
+@container-md:  (940px + 30px);
+@container-lg:  (1140px + 30px);
+
+/* =========================
+   Display
+   ========================= */
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.visible {
+  display: initial !important;
+  visibility: visible !important;
+}
+
+.fade {
+  .transition(opacity .5s linear);
+  opacity: 1;
+  &.out {
+    opacity: 0;
+  }
+}
+
+/* =========================
+   Positioning
+   ========================= */
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+/* =========================
+   Alignment
+   ========================= */
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* =========================
+   Margin
+   ========================= */
+
+.margin {
+  padding-top: 7em;
+  padding-bottom: 5em;
+
+  @media (min-width: @view-sm) {
+    padding-top: 9em;
+    padding-bottom: 6em;
+  }
+}

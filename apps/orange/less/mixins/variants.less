@@ -1,0 +1,20 @@
+/*
+ * Variants
+ *
+ * Copyright © SoftLayer, an IBM Company
+ * Code and documentation licensed under MIT
+ *
+ */
+
+.button-variant(@color; @background; @border; @hover) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+  &:hover,
+  &:focus,
+  &:active {
+    color: @hover;
+    background-color: @border;
+    border-color: @border;
+  }
+}

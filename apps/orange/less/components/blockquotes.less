@@ -1,0 +1,31 @@
+/*
+ * Blockquotes
+ *
+ * Copyright © Michael O'Rourke (@caleorourke).
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+blockquote {
+  padding: 10px 20px;
+  margin: 16px 0 20px;
+  color: @gray40;
+  border-left: 6px solid @gray80;
+
+  p {
+    font-size: 24px;
+    font-weight: @font-weight-light;
+    line-height: @line-height-medium;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: @gray30;
+    &:focus,
+    &:hover {
+      color: darken(@green, 8%);
+    }
+  }
+}

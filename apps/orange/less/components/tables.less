@@ -1,0 +1,57 @@
+/*
+ * Table
+ *
+ * Copyright © Michael O'Rourke (@caleorourke).
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+table {
+  display: block;
+  max-width: 100%;
+  margin: 16px 0 20px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  font-size: 22px;
+  line-height: @line-height-medium;
+
+  > thead {
+    color: @gray10;
+    background-color: @gray90;
+    border: 1px solid @gray60;
+
+    > tr {
+      > th {
+        border-left: 1px solid @gray60;
+      }
+      > th,
+      > td {
+        padding: .5em .625em .5em .563em;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  > tbody {
+    overflow-x: auto;
+    vertical-align: top;
+
+    > tr {
+      > th,
+      > td {
+        padding: .5em .625em .5em .563em;
+        border: 1px solid @gray60;
+      }
+
+      td > ol,
+      td > ul {
+        padding-left: 24px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  @media (min-width: @view-lg) {
+    display: table;
+  }
+}

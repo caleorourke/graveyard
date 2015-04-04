@@ -1,0 +1,45 @@
+/*
+ * Hero
+ *
+ * Copyright © Michael O'Rourke (@caleorourke).
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+.hero {
+  padding: 2em 0 3em;
+  color: @gray10;
+  text-align: center;
+  background-color: @white;
+
+  .name {
+    margin: 2.75em 0 0;
+    font-family: @font-family-sans;
+    font-size: 2.4em;
+    font-weight: @font-weight-bold;
+    line-height: @line-height-xsmall;
+    letter-spacing: @letter-spacing-xlarge;
+  }
+
+  .tagline {
+    margin: 0 0 .5em;
+    font-family: @font-family-normal;
+    font-size: 1.7em;
+    font-weight: @font-weight-light;
+    line-height: @line-height-small;
+    letter-spacing: @letter-spacing-normal;
+  }
+
+  @media (min-width: @view-sm) {
+    padding-top: 7em;
+
+    .name {
+      margin: 0;
+      font-size: 2.65em;
+    }
+
+    .tagline {
+      margin: 0 2.25em .625em;
+    }
+  }
+}

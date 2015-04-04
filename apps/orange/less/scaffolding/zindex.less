@@ -1,0 +1,29 @@
+/*
+ * Copyright © Michael O'Rourke (@caleorourke)
+ *
+ * zindex.less
+ * Z-index values should always be defined in z-index.less. This allows us to determine
+ * relative layers of our application and prevents bugs arrising from arbitrary z-index
+ * values. Do not edit the z-index scale! Only add application scoped z-index values.
+ *
+ */
+
+@zindex-1:  100;
+@zindex-2:  200;
+@zindex-3:  300;
+@zindex-4:  400;
+@zindex-5:  500;
+@zindex-6:  600;
+@zindex-7:  700;
+@zindex-8:  800;
+@zindex-9:  900;
+@zindex-10: 1000;
+
+/* =========================
+   Z-Index Application
+   ========================= */
+
+@zindex-nav:        @zindex-1;
+@zindex-nav-fixed:  @zindex-2;
+@zindex-backdrop:   @zindex-3;
+@zindex-overlay:    @zindex-4;

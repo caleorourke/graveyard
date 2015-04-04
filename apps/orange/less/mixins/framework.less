@@ -1,0 +1,77 @@
+/*
+ * Framework
+ *
+ * Copyright © SoftLayer, an IBM Company
+ * Code and documentation licensed under MIT
+ *
+ */
+
+.make-grid-columns() {
+  .col(@index) when (@index = 1) {
+    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
+    .col((@index + 1), @item);
+  }
+
+  .col(@index, @list) when (@index =< 12) {
+    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+
+  .col(@index, @list) when (@index > 12) {
+    @{list} {
+      position: relative;
+      min-height: 1px;
+      padding-left:  (30px / 2);
+      padding-right: (30px / 2);
+    }
+  }
+  .col(1);
+}
+
+.make-grid-columns-float(@class) {
+  .col(@index) when (@index = 1) {
+    @item: ~".col-@{class}-@{index}";
+    .col((@index + 1), @item);
+  }
+
+  .col(@index, @list) when (@index =< 12) {
+    @item: ~".col-@{class}-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+
+  .col(@index, @list) when (@index > 12) {
+    @{list} {
+      float: left;
+    }
+  }
+  .col(1);
+}
+
+.calc-grid(@index, @class, @type) when (@type = width) and (@index > 0) {
+  .col-@{class}-@{index} {
+    width: percentage((@index / 12));
+  }
+}
+
+.calc-grid(@index, @class, @type) when (@type = push) {
+  .col-@{class}-push-@{index} {
+    left: percentage((@index / 12));
+  }
+}
+
+.calc-grid(@index, @class, @type) when (@type = pull) {
+  .col-@{class}-pull-@{index} {
+    right: percentage((@index / 12));
+  }
+}
+
+.calc-grid(@index, @class, @type) when (@type = offset) {
+  .col-@{class}-offset-@{index} {
+    margin-left: percentage((@index / 12));
+  }
+}
+
+.make-grid(@index, @class, @type) when (@index >= 0) {
+  .calc-grid(@index, @class, @type);
+  .make-grid((@index - 1), @class, @type);
+}

@@ -1,0 +1,23 @@
+<!-- Date -->
+<div class="date fade" id="date-element">
+  <p>Updated {{page.date}}</p>
+</div>
+
+<!-- Estimate -->
+<div class="reading">
+  <span class="estimate"></span>
+</div>
+
+<!-- Overlay -->
+<a class="overlay-icon" onclick="document.getElementById('backdrop').style.visibility='visible';document.getElementById('overlay').style.left='0'" href="javascript:void(0)" title="Table of Contents"><i class="fa fa-list-ul"></i></a>
+
+<div id="overlay">
+  <a onclick="document.getElementById('backdrop').style.visibility='hidden';document.getElementById('overlay').style.left='-21em'" href="javascript:void(0)">
+    <div class="overlay-title">Table of Contents</div>
+    <div class="overlay-index">
+      <ul class="index"></ul>
+    </div>
+  </a>
+</div>
+
+<div id="backdrop" onclick="document.getElementById('backdrop').style.visibility='hidden';document.getElementById('overlay').style.left='-21em'" href="javascript:void(0)"></div>

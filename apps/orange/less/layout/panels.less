@@ -1,0 +1,41 @@
+/*
+ * Panels
+ *
+ * Copyright © Michael O'Rourke (@caleorourke).
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+.panel-collection {
+  padding-bottom: 1.5em;
+  font-family: @font-family-sans;
+}
+
+.panel {
+  position: relative;
+  display: block;
+  margin-bottom: 2em;
+}
+
+.panel-box {
+  padding: 1em 1em 0;
+  background: transparent;
+
+  .panel-title {
+    padding: .65em 0 0 .125em;
+    font-size: .9em;
+    font-weight: @font-weight-bold;
+    color: @gray40;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+
+  .panel-teaser {
+    margin: -1.063em -1.063em 3em;
+
+    > * {
+      text-decoration: none;
+      border-radius: @border-radius-small;
+    }
+  }
+}

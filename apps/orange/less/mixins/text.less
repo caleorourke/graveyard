@@ -1,0 +1,38 @@
+/*
+ * Text
+ *
+ * Copyright © SoftLayer, an IBM Company
+ * Code and documentation licensed under MIT
+ *
+ */
+
+.antialiased-text() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.no-antialiased-text() {
+  -webkit-font-smoothing: initial;
+}
+
+.optimize-text() {
+  text-rendering: optimizeLegibility;
+}
+
+.underline-text() {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, rgba(0,0,0,.9) 75%);
+  background-repeat: repeat-x;
+  background-position: 0 24px;
+  background-size: 2px 2px;
+}
+
+.underline-text-dashed() {
+  background-image: linear-gradient(to right,@gray40 40%,rgba(255,255,255,0) 20%);
+  background-repeat: repeat-x;
+  background-position: 0 25px;
+  background-size: 5px 1px;
+}
+
+.hide-underline-text() {
+  background-image: none;
+}

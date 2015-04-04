@@ -1,0 +1,29 @@
+<a class="nav-toggle" id="toggle-element" href="#">
+  <img class="borderless" src="{{page.baseurl}}assets/img/navicon.png" height="34" width="34" alt="toggle">
+</a>
+
+<!-- Nav -->
+<nav id="nav-element">
+  <div class="nav-wrapper">
+    <a class="nav-item{% if page.url == "/" %} active {% endif %}" href="{{page.baseurl}}"><i class="fa fa-home fa-fw"></i> Home</a>
+
+{% assign nav-items = site.pages | sort:"order"  %}
+{% for node in nav-items %}
+  {% if node.heading != null %}
+    {% if node.layout == "pages" %}
+
+    <a class="nav-item{% if page.url == node.url %} active {% endif %}" href="{{site.baseurl}}{{node.url}}"><i class="fa fa-chevron-right fa-fw"></i> {{node.heading}}</a>
+
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+    <ul class="nav-divider"></ul>
+    <a class="nav-item" href="//twitter.com/{{site.twitter.handle}}" target="_blank"><i class="fa fa-twitter fa-fw"></i> @{{site.twitter.handle}}</a>
+    <a class="nav-item" href="{{site.github.repository_url}}" target="_blank"><i class="fa fa-github-alt fa-fw"></i> View on GitHub</a>
+    <a class="nav-item" href="{{site.website}}" target="_blank"><i class="fa fa-globe fa-fw"></i> Visit Website</a>
+
+    <ul class="nav-divider"></ul>
+    <p class="nav-footer"> Code and documentation licensed under the {{site.github.license}} License.</p>
+  </div>
+</nav>

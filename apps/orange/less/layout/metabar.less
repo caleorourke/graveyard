@@ -1,0 +1,59 @@
+/*
+ * Metabar
+ *
+ * Copyright © Michael O'Rourke (@caleorourke).
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+/* =========================
+   Estimate
+   ========================= */
+
+.reading {
+  position: absolute;
+  top: 1.7em;
+  right: 1em;
+  display: block;
+  font-family: @font-family-sans;
+  font-size: .93em;
+  font-weight: @font-weight-light;
+  color: @gray50;
+
+  @media (min-width: @view-sm) {
+    right: 5em;
+  }
+}
+
+/* =========================
+   Date
+   ========================= */
+
+.date {
+  display: none;
+
+  @media (min-width: @view-sm) {
+    display: block;
+
+    p {
+      position: absolute;
+      top: 1.7em;
+      left: 3.75em;
+      padding-left: .4em;
+      font-family: @font-family-sans;
+      font-size: .93em;
+      font-weight: @font-weight-light;
+      color: @gray50;
+
+      &:before {
+        display: block;
+        float: left;
+        width: 1px;
+        height: 1.75em;
+        margin: -.15em .75em 0 .25em;
+        content: "";
+        background: @gray60;
+      }
+    }
+  }
+}

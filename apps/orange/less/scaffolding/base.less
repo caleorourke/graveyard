@@ -1,0 +1,103 @@
+/*
+ * Base
+ *
+ * Copyright © Michael O'Rourke (@caleorourke).
+ * Code and documentation licensed under MIT.
+ *
+ */
+
+/* =========================
+   Body
+   ========================= */
+
+body {
+  .antialiased-text();
+  .optimize-text();
+  .transition(all .4s ease-in-out);
+  position: relative;
+  left: 0;
+  overflow-x: hidden;
+  font-family: @font-family-normal;
+  font-size: 16px;
+  line-height: @line-height-normal;
+  color: @gray10;
+  background: @white;
+}
+
+/* =========================
+   Paragraph
+   ========================= */
+
+p {
+  margin: 0 0 16px;
+  font-size: 22px;
+  letter-spacing: .005em;
+  > img {
+    .center();
+  }
+}
+
+/* =========================
+   Links
+   ========================= */
+
+a {
+  .underline-text();
+  .transition-duration(.4s);
+  color: @gray10;
+  &:hover,
+  &:focus {
+    color: darken(@green, 8%);
+  }
+}
+
+/* =========================
+   Lists
+   ========================= */
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+
+  ul,
+  ol,
+  li > p  {
+    margin-bottom: 0;
+  }
+}
+
+/* =========================
+   Text Decoration
+   ========================= */
+
+u {
+  .underline-text-dashed();
+  text-decoration: none;
+}
+
+q {
+  display: block;
+  padding: 0 24px;
+  margin: 27px 0;
+  font-size: 27px;
+  font-style: italic;
+  line-height: @line-height-small;
+  text-align: center;
+}
+
+/* =========================
+   Horizontal Rule
+   ========================= */
+
+hr {
+  width: 104px;
+  margin: 48px auto;
+  clear: both;
+  border-top: 1px solid @gray70;
+
+  &.full-width {
+    width: 85%;
+  }
+}
