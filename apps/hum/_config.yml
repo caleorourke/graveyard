@@ -1,0 +1,66 @@
+#
+# * Copyright © Rasp by SoftLayer, an IBM Company
+# *
+# * _config.yml
+# * Rasp's localized configuration file. Config values should always be defined in _config.yml. Do
+# * not edit existing config values. Use spaces only, no tabs. Wrap quotes around words or phrases
+# * that contain commas or apostrophes.
+#
+
+# ==============================
+# Project
+# ==============================
+
+github:
+  title:        Rasp
+  tagline:      A discount Bootstrap for publishing technical docs on GitHub.
+  owner:        "SoftLayer, an IBM Company"
+  license:      MIT
+  user:
+    name:       caleorourke
+    repo:       rasp
+
+# ==============================
+# Social
+# ==============================
+
+twitter:
+  handle:       CaleOrourke
+  hashtags:     "docs,github-pages"
+  text:         See how Hatch helps you publish technical docs on GitHub
+keywords:       "css,framework,github,github pages,hatch,html5,jekyll,liquid,markdown,redcarpet"
+
+# ==============================
+# Markdown
+# ==============================
+
+markdown:       redcarpet
+redcarpet:
+  extensions:   ["autolink",
+                 "fenced_code_blocks",
+                 "highlight",
+                 "lax_spacing",
+                 "smart",
+                 "strikethrough",
+                 "superscript",
+                 "tables",
+                 "underline",
+                 "with_toc_data"]
+
+# ==============================
+# Server
+# ==============================
+
+baseurl:        /hum
+permalink:      pretty
+exclude:        [".csscomb.json",
+                 ".gitignore",
+                 "Gruntfile.js",
+                 "js",
+                 "less",
+                 "LICENSE",
+                 "node_modules",
+                 "package.json",
+                 "README.md"]
+gems:
+  - jekyll-sitemap

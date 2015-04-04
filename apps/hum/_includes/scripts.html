@@ -1,0 +1,27 @@
+<!-- JavaScript -->
+<script src="{{page.baseurl}}public/js/plugins.min.js"></script>
+<script src="{{page.baseurl}}public/js/main.min.js"></script>
+
+<!-- Scroll to Top -->
+<a href="#" id="button-top">
+  <i class="fa fa-chevron-up"></i>
+</a>
+
+{% if page.layout == "docs" %}
+  <!-- Table of Contents -->
+  <script>
+    $(document).ready(function() {
+      $('.contents').contents();
+    });
+  </script>
+
+  <!-- Highlight -->
+  <script>
+    hljs.configure({tabReplace: '  '});
+    hljs.initHighlightingOnLoad();
+  </script>
+
+{% elsif page.layout == "landing" %}
+  {% include handlers/github.html %}
+
+{% endif %}

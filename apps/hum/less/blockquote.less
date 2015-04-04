@@ -1,0 +1,40 @@
+/*
+ * Copyright © Rasp by SoftLayer, an IBM Company
+ *
+ * blockquote.less
+ * Rasp's blockquote element. Any blockquote property should always be defined in here.
+ * This prevents issues arrising from conflicting properties. Here, you can edit or add
+ * new blockquote properties. Remember to comb blockquote.less before committing.
+ *
+ */
+
+blockquote {
+  padding: 12px 20px;
+  margin: 20px 0;
+  color: @gray40;
+  border-left: 6px solid @gray70;
+
+  p {
+    font-size: (@font-size-normal * 1.125); /* 18px */
+    font-weight: @font-weight-light;
+    line-height: @line-height-small;
+  }
+
+  p,
+  ul,
+  ol {
+    display: -webkit-inline-box;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    code,
+    samp {
+      font-size: (@font-size-normal * .9); /* ~14.5px */
+      color: @gray40;
+    }
+  }
+}

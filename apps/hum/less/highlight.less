@@ -1,0 +1,136 @@
+/*
+ * Copyright © Rasp by SoftLayer, an IBM Company
+ *
+ * highlight.less
+ * Rasp's highlight properties. Highlight properties should always be defined in highlight.less.
+ * This allows others to see the joined classes for specific languages. Highlights are handled by
+ * the js/vendor/highlight.js script. Remember to comb lightlight.less before committing.
+ *
+ */
+
+.hljs-comment {
+  color: #989698;
+}
+
+.hljs-javadoc {
+  color: #a00;
+}
+
+.hljs-keyword,
+.method,
+.hljs-list .hljs-keyword,
+.nginx .hljs-title,
+.hljs-tag .hljs-title,
+.setting .hljs-value,
+.hljs-winutils,
+.tex .hljs-command,
+.http .hljs-title,
+.hljs-request,
+.hljs-status {
+  color: #120a8f;
+}
+
+.hljs-envvar,
+.tex .hljs-special {
+  color: #660;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-cdata,
+.hljs-filter .hljs-argument,
+.hljs-attr_selector,
+.apache .hljs-cbracket,
+.hljs-date,
+.hljs-regexp,
+.coffeescript .hljs-attribute {
+  color: @green;
+}
+
+.hljs-sub .hljs-identifier,
+.hljs-pi,
+.hljs-tag,
+.hljs-tag .hljs-keyword,
+.hljs-decorator,
+.ini .hljs-title,
+.hljs-shebang,
+.hljs-prompt,
+.hljs-hexcolor,
+.hljs-rules .hljs-value,
+.hljs-literal,
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-number,
+.css .hljs-function,
+.clojure .hljs-attribute {
+  color: @magenta;
+}
+
+.hljs-class .hljs-title,
+.smalltalk .hljs-class,
+.hljs-javadoctag,
+.hljs-yardoctag,
+.hljs-phpdoc,
+.hljs-dartdoc,
+.hljs-type,
+.hljs-typename,
+.hljs-tag .hljs-attribute,
+.hljs-doctype,
+.hljs-class .hljs-id,
+.hljs-built_in,
+.setting,
+.hljs-params,
+.hljs-variable {
+  color: @purple;
+}
+
+.css .hljs-tag,
+.hljs-rules .hljs-property,
+.hljs-pseudo,
+.hljs-subst {
+  color: @gray20;
+}
+
+.css .hljs-class,
+.css .hljs-id {
+  color: #9b703f;
+}
+
+.hljs-value .hljs-important {
+  font-weight: bold;
+  color: #f70;
+}
+
+.hljs-rules .hljs-keyword {
+  color: #c5af75;
+}
+
+.hljs-annotation,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in {
+  color: #9b859d;
+}
+
+.hljs-preprocessor,
+.hljs-preprocessor *,
+.hljs-pragma {
+  color: @gray30;
+}
+
+.diff .hljs-header,
+.hljs-chunk {
+  font-weight: bold;
+  color: #808080;
+}
+
+.diff .hljs-change {
+  background-color: #bccff9;
+}
+
+.hljs-addition {
+  background-color: #baeeba;
+}
+
+.hljs-deletion {
+  background-color: #ffc8bd;
+}

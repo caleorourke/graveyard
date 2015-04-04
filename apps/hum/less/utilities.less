@@ -1,0 +1,79 @@
+/*
+ * Copyright © Rasp by SoftLayer, an IBM Company
+ *
+ * utilities.less
+ * Rasp's utility classes. A handful of helpful utility classes to add certain behaviors to your elements.
+ * Each utility class begins with '.u-*' to make it easily identified in production. Here, you can edit or
+ * add new utility classes. Remember to comb utilities.less before committing.
+ *
+ */
+
+/* =========================
+   Display
+   ========================= */
+
+.u-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.u-visible {
+  display: inherit !important;
+  visibility: visible !important;
+}
+
+/* =========================
+   Positioning
+   ========================= */
+
+.u-absolute {
+  position: absolute;
+}
+
+.u-fixed {
+  position: fixed;
+}
+
+.u-relative {
+  position: relative;
+}
+
+.u-pull-right {
+  float: right !important;
+}
+
+.u-pull-left {
+  float: left !important;
+}
+
+/* =========================
+   Alignment
+   ========================= */
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+/* =========================
+   Grid
+   ========================= */
+
+.clearfix {
+  .clearfix();
+}
+
+.container {
+  .make-container();
+}
+
+.row {
+  .make-row();
+}

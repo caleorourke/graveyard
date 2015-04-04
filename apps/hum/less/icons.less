@@ -1,0 +1,58 @@
+/*
+ * Copyright © Rasp by SoftLayer, an IBM Company
+ *
+ * icons.less
+ * Rasp's icon elements. Icon properties should always be defined in icons.less. This prevents
+ * issues arrising from conflicting properties. Here, you can edit or add new icon properties.
+ * Remember to comb icons.less before committing.
+ *
+ */
+
+.iconset {
+  padding: 70px 0 0;
+}
+
+.icon {
+  padding-top: 0;
+
+  a {
+    color: @gray80;
+    text-decoration: none;
+  }
+
+  p {
+    padding: 0 20px;
+    font-weight: @font-weight-light;
+    color: @white;
+  }
+}
+
+.icon-large {
+  .transition-duration(.4s);
+  .transition-property(color);
+  font-size: (@font-size-normal * 5) !important; /* 80px */
+
+  &.icon-white {
+    .icon-variant(@white);
+  }
+
+  &.icon-animated {
+    .transition-property(-webkit-transform);
+    .transition-duration(1s);
+    &:hover,
+    &:focus {
+      .animation-name(pulse);
+      .animation-duration(1.5s);
+      .animation-iteration-count(infinite);
+      .animation-timing-function(linear);
+    }
+  }
+}
+
+.icon-normal {
+  padding-left: 2px;
+  font-size: @font-size-medium;
+  font-weight: @font-weight-light;
+  color: @gray50;
+  letter-spacing: @letter-spacing-xlarge;
+}

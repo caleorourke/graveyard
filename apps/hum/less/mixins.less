@@ -1,0 +1,501 @@
+/*
+ * Copyright © Rasp by SoftLayer, an IBM Company
+ *
+ * mixins.less
+ * Rasp's mixin library. Mixins should always be defined in mixins.less. This allows others
+ * to see the complete list of declared mixins and their properties. Here, you can edit or add
+ * new mixins and mixin properties. Do not comb mixins.less before committing.
+ *
+ */
+
+/*
+ * 1. Text
+ * 2. Opacity
+ * 3. Variants
+ * 4. Animation
+ * 5. Backface
+ * 6. Perspective
+ * 7. Sizes
+ * 8. Transform
+ * 9. Translate
+ * 10. Transition
+ * 11. Clearfix
+ * 12. Height
+ * 13. Framework
+ * 14. Columns
+ * 15. Center
+ * 16. Highlight Color
+ * 17. Unused
+ *
+ */
+
+/* =========================
+   Text
+   ========================= */
+
+.adjust-text(@percentage) {
+  -webkit-text-size-adjust: (@percentage);
+      -ms-text-size-adjust: (@percentage);
+}
+
+.antialiased-text() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.no-antialiased-text() {
+  -webkit-font-smoothing: initial;
+}
+
+.optimize-text() {
+  text-rendering: optimizeLegibility;
+}
+
+.underline-text() {
+  background-image: linear-gradient(to right,@gray30 40%,rgba(255,255,255,0) 20%);
+  background-repeat: repeat-x;
+  background-position: 0 18px;
+  background-size: 5px 1px;
+}
+
+/* =========================
+   Opacity
+   ========================= */
+
+.opacity(@opacity) {
+  opacity: @opacity;
+}
+
+/* =========================
+   Variants
+   ========================= */
+
+.button-variant(@color; @background; @border; @hover) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: lighten(@border, 20%);
+    box-shadow: inset 0 2px 1px rgba(0,0,0,.075), 0 0 8px @hover;
+  }
+}
+
+.icon-variant(@hover) {
+  color: inherit;
+  &:hover,
+  &:focus,
+  &:active {
+    color: @hover;
+  }
+}
+
+/* =========================
+   Animation
+   ========================= */
+
+.animation(@animation) {
+  -webkit-animation: @animation;
+          animation: @animation;
+}
+
+.animation-name(@name) {
+  -webkit-animation-name: @name;
+          animation-name: @name;
+}
+
+.animation-duration(@duration) {
+  -webkit-animation-duration: @duration;
+          animation-duration: @duration;
+}
+
+.animation-timing-function(@timing-function) {
+  -webkit-animation-timing-function: @timing-function;
+          animation-timing-function: @timing-function;
+}
+
+.animation-delay(@delay) {
+  -webkit-animation-delay: @delay;
+          animation-delay: @delay;
+}
+
+.animation-iteration-count(@iteration-count) {
+  -webkit-animation-iteration-count: @iteration-count;
+          animation-iteration-count: @iteration-count;
+}
+
+.animation-direction(@direction) {
+  -webkit-animation-direction: @direction;
+          animation-direction: @direction;
+}
+
+.animation-fill-mode(@fill-mode) {
+  -webkit-animation-fill-mode: @fill-mode;
+          animation-fill-mode: @fill-mode;
+}
+
+/* =========================
+   Backface
+   ========================= */
+
+.backface-visibility(@visibility) {
+  -webkit-backface-visibility: @visibility;
+     -moz-backface-visibility: @visibility;
+          backface-visibility: @visibility;
+}
+
+/* =========================
+   Perspective
+   ========================= */
+
+.perspective(@perspective) {
+  -webkit-perspective: @perspective;
+     -moz-perspective: @perspective;
+          perspective: @perspective;
+}
+
+.perspective-origin(@perspective) {
+  -webkit-perspective-origin: @perspective;
+     -moz-perspective-origin: @perspective;
+          perspective-origin: @perspective;
+}
+
+/* =========================
+   Sizes
+   ========================= */
+
+.box-sizing(@boxmodel) {
+  box-sizing: @boxmodel;
+}
+
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height) {
+  padding: @padding-vertical @padding-horizontal;
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+/* =========================
+   Transform
+   ========================= */
+
+.transform-origin(@origin) {
+  -webkit-transform-origin: @origin;
+     -moz-transform-origin: @origin;
+      -ms-transform-origin: @origin;
+          transform-origin: @origin;
+}
+
+/* =========================
+   Translate
+   ========================= */
+
+.translate(@x; @y) {
+  -webkit-transform: translate(@x, @y);
+          transform: translate(@x, @y);
+}
+
+.translate3d(@x; @y; @z) {
+  -webkit-transform: translate3d(@x, @y, @z);
+          transform: translate3d(@x, @y, @z);
+}
+
+/* =========================
+   Transition
+   ========================= */
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+          transition: @transition;
+}
+
+.transition-property(@transition-property) {
+  -webkit-transition-property: @transition-property;
+          transition-property: @transition-property;
+}
+
+.transition-delay(@transition-delay) {
+  -webkit-transition-delay: @transition-delay;
+          transition-delay: @transition-delay;
+}
+
+.transition-duration(@transition-duration) {
+  -webkit-transition-duration: @transition-duration;
+          transition-duration: @transition-duration;
+}
+
+.transition-timing-function(@timing-function) {
+  -webkit-transition-timing-function: @timing-function;
+          transition-timing-function: @timing-function;
+}
+
+.transition-transform(@transition) {
+  -webkit-transition: -webkit-transform @transition;
+     -moz-transition: -moz-transform @transition;
+          transition: transform @transition;
+}
+
+/* =========================
+   Clearfix
+   ========================= */
+
+.clearfix() {
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* =========================
+   Heights
+   ========================= */
+
+.vertical-height(@element-height) {
+  margin-top: ((340px - @element-height) / 2);
+  margin-bottom: ((340px - @element-height) / 2);
+}
+
+/* =========================
+   Frameworks
+   ========================= */
+
+.make-grid-columns() {
+  .col(@index) when (@index = 1) {
+    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
+    .col((@index + 1), @item);
+  }
+
+  .col(@index, @list) when (@index =< 12) {
+    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+
+  .col(@index, @list) when (@index > 12) {
+    @{list} {
+      position: relative;
+      min-height: 1px;
+      padding-left:  (30px / 2);
+      padding-right: (30px / 2);
+    }
+  }
+  .col(1);
+}
+
+.make-grid-columns-float(@class) {
+  .col(@index) when (@index = 1) {
+    @item: ~".col-@{class}-@{index}";
+    .col((@index + 1), @item);
+  }
+
+  .col(@index, @list) when (@index =< 12) {
+    @item: ~".col-@{class}-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+
+  .col(@index, @list) when (@index > 12) {
+    @{list} {
+      float: left;
+    }
+  }
+  .col(1);
+}
+
+.calc-grid(@index, @class, @type) when (@type = width) and (@index > 0) {
+  .col-@{class}-@{index} {
+    width: percentage((@index / 12));
+  }
+}
+
+.calc-grid(@index, @class, @type) when (@type = push) {
+  .col-@{class}-push-@{index} {
+    left: percentage((@index / 12));
+  }
+}
+
+.calc-grid(@index, @class, @type) when (@type = pull) {
+  .col-@{class}-pull-@{index} {
+    right: percentage((@index / 12));
+  }
+}
+
+.calc-grid(@index, @class, @type) when (@type = offset) {
+  .col-@{class}-offset-@{index} {
+    margin-left: percentage((@index / 12));
+  }
+}
+
+.make-grid(@index, @class, @type) when (@index >= 0) {
+  .calc-grid(@index, @class, @type);
+  .make-grid((@index - 1), @class, @type);
+}
+
+/* =========================
+   Columns
+   ========================= */
+
+.make-container(@gutter: 30px) {
+  .clearfix();
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+}
+
+.make-row(@gutter: 30px) {
+  .clearfix();
+  margin-left:  (@gutter / -2);
+  margin-right: (@gutter / -2);
+}
+
+/* X-Small Columns */
+
+.make-xs-column(@columns; @gutter: 30px) {
+  position: relative;
+  float: left;
+  width: percentage((@columns / 12));
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+}
+
+.make-xs-column-offset(@columns) {
+  @media (min-width: @view-xsmall) {
+    margin-left: percentage((@columns / 12));
+  }
+}
+
+.make-xs-column-push(@columns) {
+  @media (min-width: @view-xsmall) {
+    left: percentage((@columns / 12));
+  }
+}
+
+.make-xs-column-pull(@columns) {
+  @media (min-width: @view-xsmall) {
+    right: percentage((@columns / 12));
+  }
+}
+
+/* Small Columns */
+
+.make-sm-column(@columns; @gutter: 30px) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  @media (min-width: @view-small) {
+    float: left;
+    width: percentage((@columns / 12));
+  }
+}
+
+.make-sm-column-offset(@columns) {
+  @media (min-width: @view-small) {
+    margin-left: percentage((@columns / 12));
+  }
+}
+
+.make-sm-column-push(@columns) {
+  @media (min-width: @view-small) {
+    left: percentage((@columns / 12));
+  }
+}
+
+.make-sm-column-pull(@columns) {
+  @media (min-width: @view-small) {
+    right: percentage((@columns / 12));
+  }
+}
+
+/* Medium Columns */
+
+.make-md-column(@columns; @gutter: 30px) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  @media (min-width: @view-medium) {
+    float: left;
+    width: percentage((@columns / 12));
+  }
+}
+
+.make-md-column-offset(@columns) {
+  @media (min-width: @view-medium) {
+    margin-left: percentage((@columns / 12));
+  }
+}
+
+.make-md-column-push(@columns) {
+  @media (min-width: @view-medium) {
+    left: percentage((@columns / 12));
+  }
+}
+
+.make-md-column-pull(@columns) {
+  @media (min-width: @view-medium) {
+    right: percentage((@columns / 12));
+  }
+}
+
+/* Large Columns */
+
+.make-lg-column(@columns; @gutter: 30px) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  @media (min-width: @view-large) {
+    float: left;
+    width: percentage((@columns / 12));
+  }
+}
+
+.make-lg-column-offset(@columns) {
+  @media (min-width: @view-large) {
+    margin-left: percentage((@columns / 12));
+  }
+}
+
+/* =========================
+   Center
+   ========================= */
+
+.center() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   Highlight Color
+   ========================= */
+
+.tap-highlight-color(@color) {
+  -webkit-tap-highlight-color: (@color);
+     -moz-tap-highlight-color: (@color);
+      -ms-tap-highlight-color: (@color);
+}
+
+/* =========================
+   Unused
+   ========================= */
+/*
+.underline-text() {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, rgba(0,0,0,.9) 75%);
+  background-repeat: repeat-x;
+  background-position: 0 18px;
+  background-size: 2px 2px;
+}
+
+.hide-underline-text() {
+  background-image: none;
+}
+*/

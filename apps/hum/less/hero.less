@@ -1,0 +1,32 @@
+/*
+ * Copyright © Rasp by SoftLayer, an IBM Company
+ *
+ * hero.less
+ * Rasp's hero layout. Hero properties should always be defined in hero.less. This prevents
+ * issues arrising from conflicting properties. Here, you can edit or add new hero properties.
+ * Remember to comb hero.less before committing.
+ *
+ */
+
+.hero {
+  padding: 35px 0 20px;
+  text-align: center;
+
+  .hero-title {
+    margin-top: 48px;
+    margin-bottom: 2px;
+    font-size: (@font-size-normal * 3.125); /* 50px */
+    letter-spacing: @letter-spacing-large;
+
+    @media (min-width: @view-small) {
+      padding-top: 70px;
+    }
+  }
+
+  .hero-tagline {
+    margin: 0 0 22px;
+    font-size: (@font-size-normal * 1.625); /* 26px */
+    font-weight: @font-weight-light;
+    letter-spacing: @letter-spacing-small;
+  }
+}

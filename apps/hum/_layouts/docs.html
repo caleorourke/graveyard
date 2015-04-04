@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="light-colored">
+    {% include metabar.html %}
+    <div class="container page-container">
+      <div class="col-md-9 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <header>
+          <h1 class="page page-title">{{page.title}}</h1>
+          <h2 class="page page-tagline">{{page.tagline}}</h2>
+        </header>
+        {{content}}
+      </div>
+    </div>
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>

@@ -1,0 +1,126 @@
+/*
+ * Copyright © Rasp by SoftLayer, an IBM Company
+ *
+ * base.less
+ * Rasp's common base elements. Base properties should always be defined in base.less. This prevents
+ * issues arrising from conflicting properties. Here, you can edit or add new base properties. Remember
+ * to comb base.less before committing.
+ *
+ */
+
+/* =========================
+   Body
+   ========================= */
+
+body {
+  .antialiased-text();
+  .optimize-text();
+  font-family: @font-family-sans-serif;
+  font-size: @font-size-normal;
+  line-height: @line-height-normal;
+  color: @gray10;
+  background-color: transparent;
+
+  &.light-colored {
+    background-color: @white;
+  }
+
+  &.dark-colored {
+    color: @white;
+    background-color: @gray10;
+  }
+
+  &.full-height {
+    height: 100%;
+  }
+}
+
+/* =========================
+   Paragraph
+   ========================= */
+
+p {
+  margin: 0 0 12px;
+  > img {
+    .center();
+  }
+}
+
+/* =========================
+   Links
+   ========================= */
+
+a {
+  .transition-duration(.4s);
+  .transition-property(color);
+  color: @blue;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+/* =========================
+   Lists
+   ========================= */
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 15px;
+  line-height: @line-height-normal;
+
+  ul,
+  ol,
+  li > p {
+    margin-bottom: 0;
+  }
+}
+
+/* =========================
+   Text Decoration
+   ========================= */
+
+u {
+  .underline-text();
+  text-decoration: none;
+}
+
+q {
+  display: block;
+  padding: 0 25px;
+  margin: 25px 0;
+  font-size: (@font-size-normal * 1.5); /* 24px */
+  font-style: italic;
+  line-height: @line-height-small;
+  text-align: center;
+}
+
+/* =========================
+   Horizontal Rule
+   ========================= */
+
+hr {
+  width: 100px;
+  margin: 40px auto;
+  clear: both;
+  border-top: 1px solid @gray70;
+  &.extended {
+    width: 85%;
+  }
+}
+
+/* =========================
+   Mobile View
+   ========================= */
+
+.mobile {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

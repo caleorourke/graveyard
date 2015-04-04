@@ -1,0 +1,41 @@
+/*
+ * Copyright © Rasp by SoftLayer, an IBM Company
+ *
+ * page.less
+ * Rasp's page layout. Page properties should always be defined in page.less. This prevents
+ * issues arrising from conflicting properties. Here, you can edit or add new page properties.
+ * Remember to comb page.less before committing.
+ *
+ */
+
+.page {
+  margin: 0;
+  line-height: @line-height-small;
+  color: @gray10;
+
+  &.page-title {
+    font-size: (@font-size-normal * 2.5); /* 40px */
+    font-weight: @font-weight-light;
+    letter-spacing: @letter-spacing-small;
+  }
+
+  &.page-tagline {
+    margin-bottom: 35px;
+    font-size: @font-size-xlarge; /* 22px */
+    font-weight: @font-weight-bold;
+  }
+}
+
+/* =========================
+   Container
+   ========================= */
+
+.page-container {
+  padding-top: 110px;
+  padding-bottom: 35px;
+
+  @media (min-width: @view-small) {
+    padding-top: 160px;
+    padding-bottom: 50px;
+  }
+}

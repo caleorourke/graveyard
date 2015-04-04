@@ -1,0 +1,36 @@
+<nav class="metabar">
+  <div class="metabar-header">
+    <button type="button" class="metabar-toggle" data-toggle="collapse" data-target="#top-collapse">
+      <span class="mobile">Toggle</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="{{page.baseurl}}">
+      <img class="metabar-logo" src="{{page.baseurl}}public/img/metabar-logo.png" height="34" width="54">
+    </a>
+  </div>
+  <div class="collapse metabar-collapse" id="#top-collapse">
+    <ul class="metabar-tabs tabs">
+
+    {% assign node-items = site.pages | sort: "order" %}
+    {% for node in node-items %}
+      {% if node.layout == "docs" %}
+        <li>
+          <a class="{% if page.url == node.url %} active {% endif %}" href="{{site.baseurl}}{{node.url}}">{{node.title}}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+
+    </ul>
+  </div>
+
+  {% if page.layout == "docs" %}
+    <a class="drawer-icon" onclick="document.getElementById('drawer-backdrop').style.visibility='visible';document.getElementById('drawer').style.right='0'" href="javascript:void(0)" title="Table of Contents">
+      <i class="fa fa-angle-left"></i>
+    </a>
+  {% endif %}
+</nav>
+
+{% include drawer.html %}

@@ -1,0 +1,89 @@
+/*
+ * Copyright © Rasp by SoftLayer, an IBM Company
+ *
+ * typography.less
+ * Rasp's typography elements. Typography properties should always be defined in typography.less. This
+ * prevents issues arrising from conflicting properties. Here, you can edit or add new typography properties.
+ * Remember to comb typography.less before committing.
+ *
+ */
+
+/* =========================
+   Font
+   ========================= */
+
+@font-face {
+  font-family: "Benton Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/benton-sans-light.eot");
+  src: url("../fonts/benton-sans-light.eot?") format("embedded-opentype"),
+  url("../fonts/benton-sans-light.woff") format("woff"),
+  url("../fonts/benton-sans-light.ttf") format("truetype"),
+  url("../fonts/benton-sans-light.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Benton Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/benton-sans-regular.eot");
+  src: url("../fonts/benton-sans-regular.eot?") format("embedded-opentype"),
+  url("../fonts/benton-sans-regular.woff") format("woff"),
+  url("../fonts/benton-sans-regular.ttf") format("truetype"),
+  url("../fonts/benton-sans-regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Benton Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/benton-sans-bold.eot");
+  src: url("../fonts/benton-sans-bold.eot?") format("embedded-opentype"),
+  url("../fonts/benton-sans-bold.woff") format("woff"),
+  url("../fonts/benton-sans-bold.ttf") format("truetype"),
+  url("../fonts/benton-sans-bold.svg") format("svg");
+}
+
+/* =========================
+   Headings
+   ========================= */
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 5px;
+  line-height: @line-height-xsmall;
+}
+
+h1[id] {
+  padding-top: 20px;
+  margin-top: -20px;
+}
+
+h1 {
+  font-size: (@font-size-normal * 1.9); /* ~30px */
+  font-weight: @font-weight-light;
+  letter-spacing: @letter-spacing-xsmall;
+}
+
+h2 {
+  margin-top: 32px;
+  font-size: (@font-size-normal * 1.555); /* ~25px */
+  font-weight: @font-weight-normal;
+  letter-spacing: @letter-spacing-medium;
+}
+
+h3 {
+  margin-top: 27px;
+  font-size: @font-size-large; /* 22px */
+  font-weight: @font-weight-bold;
+  letter-spacing: @letter-spacing-small;
+}
+
+h4 {
+  font-size: (@font-size-normal * 1.15); /* ~18px */
+  font-weight: @font-weight-bold;
+  letter-spacing: @letter-spacing-small;
+}

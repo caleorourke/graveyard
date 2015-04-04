@@ -1,0 +1,107 @@
+/*
+ * Copyright © Rasp by SoftLayer, an IBM Company
+ *
+ * code.less
+ * Rasp's code elements. Any code, output, samp, or pre property should always be defined
+ * in here. This prevents issues arrising from conflicting properties. Here, you can edit or
+ * add new code properties. Remember to comb code.less before committing.
+ *
+ */
+
+output,
+samp,
+code,
+pre {
+  font-family: @font-family-monospace;
+  letter-spacing: -.005em;
+}
+
+output,
+samp,
+pre {
+  font-size: (@font-size-normal * .875); /* ~14px */
+}
+
+code {
+  font-size: (@font-size-normal * .835); /* ~13.5px */
+}
+
+output,
+samp {
+  color: @gray20;
+}
+
+code,
+pre {
+  color: @gray10;
+}
+
+/* =========================
+   Sample
+   ========================= */
+
+samp {
+  padding: 0 1px;
+  word-wrap: break-word;
+  white-space: inherit;
+
+  @media (min-width: @view-medium) {
+    word-wrap: normal;
+    white-space: nowrap;
+  }
+}
+
+/* =========================
+   Output
+   ========================= */
+
+output {
+  padding: 0 15px;
+  margin: -15px 0 20px;
+  overflow: auto;
+  line-height: @line-height-medium;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+/* =========================
+   Code
+   ========================= */
+
+code {
+  padding: 1.5px 5px;
+  word-wrap: break-word;
+  white-space: inherit;
+  background-color: rgba(0,0,0,.035);
+  border: 1px solid rgba(0,0,0,.01);
+  border-radius: @border-radius-small;
+
+  @media (min-width: @view-medium) {
+    word-wrap: normal;
+    white-space: nowrap;
+  }
+}
+
+/* =========================
+   Pre
+   ========================= */
+
+pre {
+  padding: 15px;
+  margin: 15px 0 20px;
+  line-height: @line-height-normal;
+  word-wrap: normal;
+  background-color: rgba(0,0,0,.015);
+  border: 1px solid @gray70;
+  border-left: 25px solid @gray70;
+  border-radius: @border-radius-normal;
+
+  code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre;
+    background-color: transparent;
+    border: none;
+  }
+}

@@ -1,0 +1,71 @@
+/*
+ * Copyright © Rasp by SoftLayer, an IBM Company
+ *
+ * buttons.less
+ * Rasp's button element. Any button property should always be defined in here. This
+ * prevents issues arrising from conflicting properties. Here, you can edit or add new
+ * button properties. Remember to comb buttons.less before committing.
+ *
+ */
+
+.button {
+  .button-size(@padding-vertical; @padding-horizontal-small; @font-size-small; @line-height-normal);
+  .transition-duration(.4s);
+  .transition-property(all);
+  display: inline-block;
+  font-weight: @font-weight-normal;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: @letter-spacing-small;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: @border-radius-xlarge;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+  > i {
+    .opacity(.9);
+    color: @gray50;
+  }
+}
+
+.button-default {
+  .button-variant(@button-default-color; @button-default-bg; @button-default-border; @button-hover);
+}
+.button-gray {
+  .button-variant(@button-gray-color; @button-gray-bg; @button-gray-border; @button-hover);
+}
+.button-white {
+  .button-variant(@button-white-color; @button-white-bg; @button-white-border; @button-hover);
+}
+
+#button-top {
+  .opacity(.15);
+  .transition(.4s);
+  position: fixed;
+  right: 12px;
+  bottom: 15px;
+  padding: 13px;
+  line-height: 0;
+  color: @gray80;
+  text-decoration: none;
+  visibility: hidden;
+  background-color: @gray50;
+  border-radius: @border-radius-xlarge;
+
+  @media (min-width: @view-medium) {
+    .opacity(.5);
+    font-size: 21px;
+    color: @gray50;
+    background-color: transparent;
+    &:hover,
+    &:focus {
+      .opacity(1);
+      bottom: 17px;
+      color: @gray30;
+    }
+  }
+}

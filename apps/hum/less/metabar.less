@@ -1,0 +1,191 @@
+/*
+ * Copyright © Rasp by SoftLayer, an IBM Company
+ *
+ * metabar.less
+ * Rasp's metabar object. Metabar properties should always be defined in metabar.less. This
+ * allows others to see how the relative layers work with the animated controls in metabar.js
+ * and code in _includes/metabar.html. Remember to comb metabar.less before committing.
+ *
+ */
+
+.metabar {
+  .backface-visibility(hidden);
+  .transition(background-color .4s);
+  .translate3d(0;0;0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: @zindex10;
+  width: 100%;
+  height: 65px;
+  margin-bottom: 25px;
+  background-color: @white;
+  border-bottom: 1px solid @gray90;
+
+  .metabar-logo {
+    margin-top: 7px;
+    margin-right: 10px;
+    margin-left: 15px;
+    border: none;
+  }
+
+  .metabar-toggle {
+    border-color: @gray60;
+    &:hover,
+    &:focus {
+      background-color: @gray60;
+    }
+
+    .icon-bar {
+      background-color: @gray40;
+    }
+  }
+
+  .metabar-collapse {
+    border-color: @gray70;
+  }
+
+  .tabs {
+    position: relative;
+    padding-left: 10px;
+    list-style: none;
+
+    li a {
+      display: block;
+      padding: 10px 20px;
+      font-size: @font-size-xsmall;
+      font-weight: @font-weight-normal;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (min-width: @view-small) {
+    background-color: rgba(255,255,255,.97);
+
+    .tabs li a {
+      .transition-duration(.4s);
+      padding: 22px 10px 17px;
+      color: @gray30;
+      letter-spacing: .005em;
+      border-bottom: 1px solid transparent;
+      &:hover,
+      &:focus {
+        color: @gray10;
+        text-decoration: none;
+      }
+      &.active {
+        color: @gray10;
+        border-bottom: 1px solid @gray60;
+      }
+    }
+  }
+
+  @media (min-width: @view-large) {
+    &.affixed {
+      .transition-transform(.4s);
+      position: fixed;
+      top: -65px;
+    }
+
+    &.visible {
+      .translate3d(0;100%;0);
+    }
+  }
+}
+
+/* =========================
+   Header
+   ========================= */
+
+@media (min-width: @view-small) {
+  .metabar-header {
+    float: left;
+  }
+}
+
+/* =========================
+   Collapse
+   ========================= */
+
+.metabar-collapse {
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+
+  &.in {
+    overflow-y: auto;
+  }
+
+  @media (min-width: @view-small) {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+
+    &.collapse {
+      display: block !important;
+      height: auto !important;
+      padding-bottom: 0;
+      overflow: visible !important;
+      visibility: visible !important;
+    }
+
+    &.in {
+      overflow-y: visible;
+    }
+  }
+}
+
+/* =========================
+   Toggle
+   ========================= */
+
+.metabar-toggle {
+  .vertical-height(34px);
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-right: 15px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: @border-radius-normal;
+
+  &:focus {
+    outline: 0;
+  }
+
+  @media (min-width: @view-small) {
+    display: none;
+  }
+}
+
+/* =========================
+   Tabs
+   ========================= */
+
+.metabar-tabs {
+  margin: 7.5px -15px;
+
+  > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 25px;
+  }
+
+  @media (min-width: @view-small) {
+    float: left;
+    margin: 0;
+
+    > li {
+      float: left;
+
+      > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
