@@ -1,0 +1,165 @@
+/*
+ * section.less
+ *
+ * Section properties should always be defined in section.less. This prevents
+ * issues with conflicting properties. Here, you can edit or add new section
+ * properties. Remember to comb this stylesheet before committing.
+ *
+ */
+
+#work,
+#about,
+#resume,
+#portfolio,
+#contact {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#home {
+  .align-items(center);
+  .background-size(cover);
+  .box-align(center);
+  .flex-align(center);
+  .flex-display(flex);
+  height: 100vh;
+  color: @white;
+  text-align: center;
+  background-position: center;
+  h1,
+  h3 {
+    font-weight: 600;
+  }
+  hr {
+    width: 220px;
+  }
+  .btn {
+    .transition(all .4s ease-in-out);
+    padding: 12px 42px;
+    margin-top: 40px;
+    margin-right: 16px;
+    font-weight: @font-weight-bold;
+    letter-spacing: 2px;
+    color: @white;
+    background-color: transparent;
+    border: 4px solid @white;
+    border-radius: 0;
+    &:hover {
+      background-color: @site-color;
+      border-color: transparent;
+    }
+  }
+  .btn-danger {
+    background-color: @site-color;
+    border-color: transparent;
+  }
+}
+
+@media (max-width: 440px) {
+  #home {
+    padding-top: 320px;
+    padding-bottom: 320px;
+  }
+}
+
+#about {
+  color: @white;
+  background-color: @gray25;
+  .col-md-6 {
+    padding: 60px 40px 40px 40px;
+  }
+  .border-right {
+    border-right: 1px solid @gray30;
+  }
+  .border-bottom {
+    border-bottom: 1px solid @gray30;
+  }
+  p {
+    padding-top: 12px;
+  }
+}
+
+#work {
+  text-align: center;
+  .col-md-4 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+}
+
+#divider {
+  background-color: @gray95;
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .divider-des {
+    padding: 40px 80px;
+  }
+  p {
+    padding-top: 18px;
+    padding-bottom: 14px;
+  }
+  .icon-small {
+    padding-right: 12px;
+  }
+  span {
+    display: block;
+    padding-bottom: 6px;
+    font-weight: @font-weight-bold;
+    letter-spacing: 2px;
+  }
+  .progress {
+    height: 3px;
+    background-color: @gray25;
+    border-radius: 0;
+    box-shadow: none;
+    .progress-bar-primary {
+      background-color: @site-color;
+    }
+  }
+}
+
+#portfolio {
+  text-align: center;
+  background-color: @white;
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  img {
+    .transition(all .4s ease-in-out);
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+      opacity: .6;
+    }
+  }
+}
+
+#contact {
+  background-color: @gray95;
+  h2 {
+    padding-bottom: 20px;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: @font-weight-bold;
+    letter-spacing: 1px;
+  }
+  .medium-icon {
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+  .contact-info {
+    div {
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+  }
+}

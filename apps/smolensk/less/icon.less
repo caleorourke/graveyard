@@ -1,0 +1,27 @@
+/*
+ * icon.less
+ *
+ * Icon properties should always be defined in icon.less. This prevents issues
+ * with conflicting properties. Here, you can edit or add new icon properties.
+ * Remember to comb this stylesheet before committing.
+ *
+ */
+
+.social-icon {
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+    padding: 6px;
+    list-style: none;
+    a {
+      .transition(all .4s ease-in-out);
+      font-size: 40px;
+      color: @gray50;
+      text-decoration: none;
+      &:hover {
+        color: @site-color;
+      }
+    }
+  }
+}

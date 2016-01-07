@@ -1,0 +1,30 @@
+#contact {
+  form {
+    padding-top: 80px;
+  }
+  .form-control {
+    .transition(all .4s ease-in-out);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid @white;
+    border-radius: 0;
+    box-shadow: none;
+    &:focus {
+      border-color: @site-color;
+    }
+  }
+  input {
+    height: 40px;
+  }
+  input[type="submit"] {
+    height: 50px;
+    margin-top: 18px;
+    letter-spacing: 1px;
+    background: transparent;
+    border: 3px solid @site-color;
+    &:hover {
+      color: @white;
+      background: @site-color;
+    }
+  }
+}

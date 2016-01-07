@@ -1,0 +1,73 @@
+/*
+ * nav.less
+ *
+ * Nav properties should always be defined in nav.less. This prevents issues
+ * with conflicting properties. Here, you can edit or add new nav properties.
+ * Remember to comb this stylesheet before committing.
+ *
+ */
+
+.custom-navbar {
+  margin-bottom: 0;
+  background: @gray30;
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: 600;
+    color: @site-color;
+    .navbar-toggle {
+      padding: 4px 6px;
+      font-size: 16px;
+      color: @white;
+      background: @site-color;
+    }
+  }
+  .nav {
+    li {
+      &.active > a {
+        color: @gray50;
+      }
+      a {
+        font-size: 11px;
+        font-weight: @font-weight-bold;
+        letter-spacing: 4px;
+        color: @white;
+        &:hover {
+          color: @gray75;
+          background: transparent;
+        }
+      }
+    }
+    > li {
+      > a {
+        &:focus {
+          color: @white;
+          background-color: transparent;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .navbar-toggle {
+    padding-top: 10px;
+    border: none;
+
+    .icon-bar {
+      background: @site-color;
+      border-color: transparent;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-navbar {
+    padding: 10px;
+    background: @gray30;
+    background: 0 0;
+    border-bottom: 0;
+    &.top-nav-collapse {
+      padding: 8px;
+      background: @gray30;
+    }
+  }
+}
