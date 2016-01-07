@@ -1,0 +1,228 @@
+/*
+ * gallery.less
+ *
+ * Gallery properties should always be defined in gallery.less. This prevents
+ * issues with conflicting properties. Here, you can edit or add new gallery
+ * properties. Remember to comb this stylesheet before committing.
+ *
+ */
+
+.gallery {
+  .i-clearfix();
+  width: 100%;
+  > .gallery-item {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    cursor: pointer;
+    > img {
+      display: block;
+      width: 100%;
+      height: auto;
+      line-height: 0;
+    }
+    > .gallery-item-text {
+      .i-transition(padding .4s ease-in-out);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 36% 20px 10px;
+      color: @white;
+      text-align: center;
+      background-color: @overlay-color;
+      opacity: 0;
+      > .gallery-links {
+        position: absolute;
+        bottom: 35%;
+        left: 0;
+        width: 100%;
+        i {
+          .i-transition(top ease-in-out .4s);
+          position: relative;
+          top: 125px;
+          display: inline-block;
+          width: 20px;
+          height: 0;
+          font-size: 18px;
+          line-height: @line-height-xlarge;
+          color: @white;
+        }
+      }
+    }
+    &:hover,
+    &.active {
+      > .gallery-item-text {
+        .i-transition(padding .4s ease-in-out);
+        top: 0;
+        padding-top: 29.4%;
+      }
+    }
+    > .gallery-item-text {
+      &.show {
+        top: 0;
+        padding: 0;
+        opacity: 1;
+      }
+      &.hover-disabled {
+        padding: 10px 20px !important;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      > .gallery-item-text {
+        > .gallery-links {
+          bottom: 25%;
+        }
+      }
+    }
+
+    @media (max-width: 1029px) {
+      > .gallery-item-text {
+        > .gallery-links {
+          bottom: 30%;
+        }
+      }
+    }
+  }
+
+  > .gallery-item.active, > .gallery-item:hover {
+    > .gallery-item-text {
+      > .gallery-links {
+        > .gallery-links-icon-6x {
+          .i-transition(top ease-in-out .6s); // .6s transition speed
+          top: 0;
+        }
+        > .gallery-links-icon-7x {
+          .i-transition(top ease-in-out .7s); // .7s transition speed
+          top: 0;
+        }
+        > .gallery-links-icon-8x {
+          .i-transition(top ease-in-out .8s); // .8s transition speed
+          top: 0;
+        }
+        > .gallery-links-icon-9x {
+          .i-transition(top ease-in-out .9s); // .9s transition speed
+          top: 0;
+        }
+        > .gallery-links-icon-10x {
+          .i-transition(top ease-in-out 1s); // 1s transition speed
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+.flexbox {
+  .gallery {
+    > .gallery-item {
+      border-right: 1px solid @gray50;
+      > .gallery-item-text {
+        .i-flex-align(center);
+        .i-flex-line-pack(center);
+        display: -webkit-flex;
+        display:         flex;
+        padding: 35px 20px 10px;
+        > .gallery-item-headline {
+          .i-flex-item-align(center);
+          .i-align-self(center);
+          .i-flex-line-pack(center);
+          .i-flex-grow(3);
+          .i-flex-positive(3);
+          strong {
+            // padding-right: 30px;
+            // padding-left: 37px;
+            font-family: @font-family-sans;
+            font-size: 20px;
+            font-weight: @font-weight-xbold;
+            line-height: @line-height-normal;
+            letter-spacing: .02em;
+            text-transform: uppercase;
+          }
+          p {
+            margin: 0;
+            font-size: 13px;
+            line-height: @line-height-small;
+          }
+          &.gallery-icons {
+            margin-top: -25px;
+          }
+
+          @media (max-width: 992px) {
+            strong {
+              font-size: 18.5px;
+            }
+          }
+        }
+      }
+      &:hover,
+      &.active {
+        > .gallery-item-text {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.gallery {
+  @media (min-width: 1000px) {
+    &.desktop-col1-1 {
+      > .gallery-item {
+        width: 100%;
+      }
+    }
+    &.desktop-col1-2 {
+      > .gallery-item {
+        width: 50%;
+      }
+    }
+    &.desktop-col1-3 {
+      > .gallery-item {
+        width: 33.333333%;
+      }
+    }
+    &.desktop-col1-4 {
+      > .gallery-item {
+        width: 25%;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    &.tablet-col1-1 {
+      > .gallery-item {
+        width: 100%;
+      }
+    }
+    &.tablet-col1-2 {
+      > .gallery-item {
+        width: 50%;
+      }
+    }
+    &.tablet-col1-3 {
+      > .gallery-item {
+        width: 33.333333%;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    &.mobile-col1-1 {
+      > .gallery-item {
+        width: 100%;
+      }
+    }
+    &.mobile-col1-2 {
+      > .gallery-item {
+        width: 50%;
+      }
+    }
+  }
+}

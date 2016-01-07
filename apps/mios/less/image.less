@@ -1,0 +1,19 @@
+/*
+ * image.less
+ *
+ * Image properties should always be defined in image.less. This prevents
+ * issues with conflicting properties. Here, you can edit or add new image
+ * properties. Remember to comb this stylesheet before committing.
+ *
+ */
+
+img {
+  border: 0;
+  &.img-thumbnail {
+    width: 185px;
+    padding: 7px;
+    margin: 7px 0 15px;
+    border: 1px solid @gray70;
+    border-radius: @border-radius-large;
+  }
+}

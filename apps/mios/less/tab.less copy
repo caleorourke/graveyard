@@ -1,0 +1,152 @@
+/*
+ * tab.less
+ *
+ * Any tab property should always be defined in here. This prevents issues
+ * with conflicting properties. Here, you can edit or add new tab properties.
+ * Remember to comb this stylesheet before committing.
+ *
+ */
+
+.tab {
+  .i-clearfix();
+  position: relative;
+  margin-bottom: 0;
+  background: @white;
+  background-size: 28px 16px;
+  border-bottom: 1px dotted @gray70;
+  &.is-closed:hover .tab-arrow-down,
+  &.open .tab-arrow-down {
+    .i-transition(opacity .4s ease);
+    opacity: 1;
+  }
+  &.is-closed {
+    cursor: pointer;
+  }
+}
+
+/* =========================
+   Content
+   ========================= */
+
+.tab-content {
+  float: left;
+  width: 660px;
+  padding: 15px 60px 10px 40px;
+  margin: 24px 0;
+  border-left: 1px dotted @gray70;
+  h4 {
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 3px;
+    font-size: 24.5px;
+    font-weight: @font-weight-bold;
+    line-height: @line-height-small;
+    letter-spacing: @letter-spacing-large;
+    color: @gray30;
+    text-transform: none;
+  }
+  h5 {
+    &.tab-content-label {
+      padding: 7px 0 15px;
+    }
+  }
+  span {
+    &.tab-content-location,
+    &.tab-content-membership {
+      padding-left: 12px;
+      margin-left: 10px;
+      color: @gray30;
+      border-left: 1px dotted @gray60;
+    }
+  }
+
+  @media (max-width: 992px) {
+    width: 425px;
+    span {
+      &.tab-content-membership {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 0;
+    margin: 12px 0 24px;
+    border: 0;
+    span {
+      &.tab-content-location {
+        display: none;
+      }
+    }
+  }
+}
+
+/* =========================
+   Arrow
+   ========================= */
+
+.tab-arrow-down {
+  .i-transition(opacity .4s ease);
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: url(../img/tab-arrow-down.png) no-repeat;
+  background-size: 28px 16px;
+  opacity: 0;
+
+  @media (max-width: 767px) {
+    top: 30px;
+    right: 10px;
+  }
+  /*
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-resolution: 1.5dppx) {
+    background: url(../img/tab-arrow-down@2x.png) no-repeat;
+    background-size: 28px 16px;
+  }*/
+}
+
+/* =========================
+   Accordion
+   ========================= */
+
+.tab-accordion {
+  margin: 5px 0 45px;
+  border-top: 1px dotted @gray70;
+}
+
+/* =========================
+   Date
+   ========================= */
+
+.tab-date {
+  float: left;
+  width: 260px;
+  height: 100%;
+  padding-top: 41px;
+  padding-left: 40px;
+  margin-right: 20px; // do not go > 20px
+  font-size: 21px;
+  line-height: @line-height-medium;
+  text-transform: uppercase;
+  span {
+    font-size: 13px;
+    letter-spacing: @letter-spacing-small;
+  }
+
+  @media (max-width: 992px) {
+    width: 150px;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 28px 0 0;
+    font-size: 13px;
+  }
+}

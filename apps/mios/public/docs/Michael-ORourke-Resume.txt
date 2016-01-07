@@ -1,0 +1,106 @@
+MICHAEL J. OROURKE
+PRODUCT MANAGER. PRODUCT DESIGNER. WEB ENGINEER.
+"I define and design products to make lives easier."
+
+Dallas, Texas
+Phone: (512) 740-4491
+E-mail: cale.orourke@gmail.com
+Website: http://thisismichaelorourke.com
+
+=====================================
+EXPERIENCE
+=====================================
+
+An accomplished technologist with experience managing the strategic and tactical avenues for products in high-tech industries. Recognized for creating forward-thinking strategies, aligning business and development pillars, and taking new products from concept, to design, to development, to release.
+
+Tech-savvy, creative, and analytical with an extensive background in Software Development, Product Innovation, and Cloud Computing. Adept at building diverse teams and working across silos. Thrives in fast-paced environments with the autonomy to work creatively and delve into new technologies.
+
+* 15 years in Product Management, Product Design, and Web Engineering
+* Working knowledge of Agile, Lean, DevOps, and Pragmatic Marketing
+* Degree in Management Information Systems
+* Studying Information Technology
+* Certified PMP, Product Owner, ScrumMaster, and more
+* Proficient in HTML/CSS, jQuery, LESS/SASS, PHP, and SQL
+
+=====================================
+EXPERIENCE
+=====================================
+
+PRODUCT MANAGER
+2012-Present
+IBM Cloud (Dallas, Texas)
+
+Cultivate pipelines to new markets and design service offerings for a growing cloud infrastructure. Responsible for cloud foundational services in global marketplaces. Reports directly to the CTO.
+
+* Craft prototype front-end UIs for proof-of-concept
+* Evaluate avenues for organic expansion and strategic partnerships
+* Enable key decision-making for executives
+* Conduct analysis to synthesize market and data-driven insights
+* Build business cases, requirements, and product roadmaps
+* Designer and developer of Hatch LESS Framework and Node grunt-jekyll-pages plugin
+
+SENIOR PRODUCT MANAGER
+2003-2012
+Neopost ID (Austin, Texas)
+
+Pivoted product initiatives and market strategies toward developing new online ecosystems and native apps. Responsible for customer-facing software and integrated solutions. Reported to the Director of Product Management.
+
+* Reached untapped markets and revenue flows
+* Evangelized products and company brands to increase global footprint
+* Enacted Open API strategies for resellers
+* Launched app store with Internet-enabled mobile/desktop apps
+* Increased attachment rates 21-29% year-over-year
+* Established new PMO and Application Portfolio practices
+* Led $25M company-wide project to turn homegrown LOB apps into enterprise systems
+
+TECHNICAL CONSULTANT
+2000-2002
+Sprint Nextel (Plano, Texas)
+
+Coordinated rollouts for mobile products and provided back office support. Responsible for all mobile assets, peripherals, and services. Reported directly to the Technical Operations Manager.
+
+* Managed firmware builds and automated testing for new devices
+* Performed routine/non-routine updates during planned windows
+* Deployed system upgrades, new hardware loads, and data swaps
+* Developed and distributed release content, collateral, and technical articles
+* Gathered quantitative data to report failure trends and serviceability issues
+
+=====================================
+CERTIFICATIONS
+=====================================
+
+PRACTICAL PRODUCT MANAGEMENT CERTIFIED
+2011-ACTIVE
+Pragmatic Marketing
+
+PROJECT MANAGEMENT PROFESSIONAL (PMP)
+2011-ACTIVE
+Project Management Institute
+
+CERTIFIED SCRUM PRODUCT OWNER
+2011-ACTIVE
+Scrum Alliance
+
+CERTIFIED SCRUM PROFESSIONAL
+2011-ACTIVE
+Scrum Alliance
+
+CERTIFIED SCRUM MASTER
+2010-ACTIVE
+Scrum Alliance
+
+NETWORK+ CERTIFIED
+2007-ACTIVE
+CompTIA
+
+=====================================
+EDUCATION
+=====================================
+
+INFORMATION TECHNOLOGY
+2015-Present
+Liberty University
+
+MANAGEMENT INFORMATION SYSTEMS
+2009-2011
+Liberty University

@@ -1,0 +1,19 @@
+Expertise in drilling into marketspaces, finding the right Product Market fit, and translating needs into stories for dev consumption
+Successfully employed the principles of Practical Product Management
+
+Establish vertical and encompassed products/partnerships in our Marketplace catalog
+
+I "have a unique skill set: a Product Manager that can code"
+
+Seeking a role as a strategist, a client advocate, and a designer that makes customers wonder how they ever got along without that product.
+
+advocate for several “Design By Experience” concepts that not only uses stories to define feature functions, but also uses mockups/blueprints/POCs to engage others and refine functionality for the greater good of the customer
+
+dashboard concept for a short-lived MONaaS we were proofing
+the intent was to get conversations going and improve its functionality incrementally
+
+The autonomy to work creatively, the ability to take on new challenges, and the power to improve continuously
+
+An accomplished, forward-looking product manager and designer with senior-level experience in the incubation, design, and launch of high-tech products. Recognized for creating new market initiatives, aligning business and development strategies, and turning around under-performing products. Adept at understanding budget, financial, and performance metrics. Technically proficient, creative, and analytical with a history of launching profitable solutions. Resourceful in fast-moving environments with the autonomy to make decisions and motivate cross-functional teams.
+
+                <li>Designer and developer of <a href="https://github.com/caleorourke/hatch" target="_blank">Hatch</a> LESS Framework and Node <a href="https://www.npmjs.com/package/grunt-jekyll-pages" target="_blank">grunt-jekyll-pages</a> plugin</li>

@@ -1,0 +1,25 @@
+<!-- Modals -->
+{% include modals/contact.html %}
+{% include modals/resume.html %}
+
+<section class="hero" id="hero">
+  <div class="hero-overlay">
+    <div class="hero-container">
+      <div class="hero-container-fullscreen">
+        <ul class="flexslider">
+          <li class="slide first">
+            <h2 class="hero-title">{{site.title}}</h2>
+            <p class="hero-tagline">{{site.headline}}</p>
+            <p class="hero-buttons">
+              <a class="btn btn-circle" data-toggle="modal" data-target="#resume" title="View my Resume"><i class="fa fa-file-text fa-fw"></i></a>
+              <a class="btn btn-circle btn-circle-reduced-2x" href="{{site.links.linkedin}}" target="_blank" title="Visit my LinkedIn profile"><i class="fa fa-linkedin fa-fw"></i></a>
+              <a class="btn btn-circle btn-circle-reduced" data-toggle="modal" data-target="#contact" title="Contact me"><i class="fa fa-phone fa-fw"></i></a>
+            </p>
+          </li>
+          <li class="slide"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <a class="hero-arrow-down u-pull-center" href="#about"></a>
+</section>

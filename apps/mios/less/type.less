@@ -1,0 +1,121 @@
+/*
+ * type.less
+ *
+ * Typography properties should always be defined in type.less. This
+ * prevents issues with conflicting properties. Here, you can edit or
+ * add new typography properties. Remember to comb this stylesheet
+ * before committing.
+ *
+ */
+
+@font-face {
+  font-family: "Benton-Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/benton-sans-light.eot?") format("embedded-opentype"),
+  url("../fonts/benton-sans-light.woff") format("woff"),
+  url("../fonts/benton-sans-light.ttf") format("truetype"),
+  url("../fonts/benton-sans-light.svg") format("svg");
+  src: url("../fonts/benton-sans-light.eot");
+}
+
+@font-face {
+  font-family: "Benton-Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/benton-sans-regular.eot?") format("embedded-opentype"),
+  url("../fonts/benton-sans-regular.woff") format("woff"),
+  url("../fonts/benton-sans-regular.ttf") format("truetype"),
+  url("../fonts/benton-sans-regular.svg") format("svg");
+  src: url("../fonts/benton-sans-regular.eot");
+}
+
+@font-face {
+  font-family: "Benton-Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/benton-sans-bold.eot?") format("embedded-opentype"),
+  url("../fonts/benton-sans-bold.woff") format("woff"),
+  url("../fonts/benton-sans-bold.ttf") format("truetype"),
+  url("../fonts/benton-sans-bold.svg") format("svg");
+  src: url("../fonts/benton-sans-bold.eot");
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-family: @font-family-sans;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: @font-weight-bold;
+  color: @gray20;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: @font-weight-bold;
+  line-height: 48px;
+  letter-spacing: 5px;
+  color: @gray20;
+  text-transform: uppercase;
+}
+
+h3 {
+  padding: 0 0 5px;
+  font-size: 38px;
+  font-weight: @font-weight-xlight;
+  line-height: @line-height-medium;
+  letter-spacing: .03em;
+  color: @gray30;
+  text-transform: uppercase;
+}
+
+h4 {
+  padding: 0 0 10px;
+  font-size: 21px;
+  font-weight: @font-weight-bold;
+  line-height: @line-height-small;
+  letter-spacing: @letter-spacing-small;
+  color: @gray30;
+  text-transform: uppercase;
+}
+
+h5 {
+  padding: 0 0 21px;
+  font-family: @font-family-sans-serif;
+  font-size: 18.5px;
+  font-weight: @font-weight-normal;
+  letter-spacing: @letter-spacing-xsmall;
+  color: @gray30;
+}
+
+h6 {
+  padding: 10px 0 0;
+  font-size: 14px;
+  font-weight: @font-weight-bold;
+  color: @gray30;
+  text-transform: uppercase;
+}
+
+.small {
+  font-size: 13.5px;
+}
+
+.lead {
+  display: block;
+  max-width: 400px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  font-family: @font-family-serif;
+  font-size: 22.5px;
+  font-weight: @font-weight-light;
+  line-height: @line-height-small;
+  letter-spacing: .01em;
+  color: @gray30;
+  text-align: center;
+}

@@ -1,0 +1,165 @@
+/*
+ * modal.less
+ *
+ * Modal properties should always be defined in modal.less. This prevents
+ * issues with conflicting properties. Here, you can edit or add new modal
+ * properties. Remember to comb this stylesheet before committing.
+ *
+ */
+
+.modal-open {
+  overflow: hidden;
+  .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindex1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  &.fade {
+    .modal-dialog {
+      .i-transition(transform .4s ease-out);
+      .i-transform(translate(0,-25%));
+    }
+  }
+  &.in {
+    .modal-dialog {
+      .i-transform(translate(0,0));
+    }
+  }
+}
+
+/* =========================
+   Dialog
+   ========================= */
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+
+  @media (min-width: 768px) {
+    width: 425px;
+    margin: 30px auto;
+  }
+}
+
+/* =========================
+   Content
+   ========================= */
+
+.modal-content {
+  position: relative;
+  background-color: @white;
+  background-clip: padding-box;
+  border: 1px solid @gray90;
+  border-radius: @border-radius-large;
+  outline: 0;
+  box-shadow: 0 3px 9px @gray60;
+
+  @media (min-width: 768px) {
+    box-shadow: 0 6px 15px rgba(0,0,0,.3);
+  }
+}
+
+/* =========================
+   Header
+   ========================= */
+
+.modal-header {
+  padding: 14px;
+  &.close {
+    margin-top: -2px;
+  }
+}
+
+/* =========================
+   Body
+   ========================= */
+
+.modal-body {
+  position: relative;
+  padding: 20px;
+  color: @gray20;
+  h4 {
+    padding-bottom: 0;
+    line-height: @line-height-medium;
+    letter-spacing: @letter-spacing-large;
+    color: @gray30;
+    text-transform: none;
+    &.namespace {
+      line-height: @line-height-xsmall;
+    }
+  }
+  p {
+    &.modal-tagline {
+      font-size: 16.5px;
+      line-height: @line-height-xsmall;
+    }
+    &.modal-paragraph {
+      margin-bottom: 10px;
+    }
+    .modal-icon {
+      padding-right: 3px;
+      margin-right: 3px;
+      font-size: 21px;
+      color: @gray30;
+      vertical-align: bottom;
+    }
+    .modal-role {
+      color: @gray50;
+      opacity: .4;
+      vertical-align: top;
+    }
+  }
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+.modal-footer {
+  padding-bottom: 24px;
+}
+
+/* =========================
+   Backdrop
+   ========================= */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindex1040;
+  background-color: @black;
+  &.fade {
+    opacity: 0;
+  }
+  &.in {
+    opacity: .5;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1029px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-sm {
+    width: 300px;
+  }
+}
