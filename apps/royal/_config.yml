@@ -1,0 +1,33 @@
+#
+# * _config.yml
+# *
+# * Localized configuration file. Config values should always be defined in _config.yml. Do not edit
+# * existing config values. Use spaces only, no tabs. Wrap quotes around words or phrases that contain
+# * commas.
+#
+
+# ==============================
+# Project
+# ==============================
+
+title:        Michael O'Rourke
+headline:     I define and design cloud products.
+
+# ==============================
+# SEO
+# ==============================
+
+keywords:     "caleorourke,career,cloud computing,dallas,design,dfw,employment,experience,history,job,manager,management,marketing,michael o'rourke,position,product,profession,project,resume,rourke,scrum,texas,tx,work"
+description:  "Michael O'Rourke is a forward-thinking Product Manager for high-tech products in Dallas, Texas."
+url:          http://thisismichaelorourke.com
+author:       Michael O'Rourke
+logo:         public/img/logo.png
+
+# ==============================
+# Server
+# ==============================
+
+permalink:    pretty
+exclude:      ["Gemfile", "LICENSE", "README.md"]
+gems:
+  - jekyll-seo-tag

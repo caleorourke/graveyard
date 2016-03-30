@@ -1,0 +1,20 @@
+# Setup
+title:            Michael O'Rourke
+tagline:          Product Management and Development
+description:      Product Manager for Cloud, Web & Digital marketplaces.
+url:              http://caleorourke.github.io/hyde
+
+author:
+  name:           Michael O'Rourke
+  url:            https://twitter.com/caleorourke
+
+github:
+  repo:           https://github.com/caleorourke/hyde
+
+# Dependencies
+baseurl:          /hyde
+permalink:        pretty
+markdown:         kramdown
+exclude:          ["Gemfile", "LICENSE", "README.md"]
+gems:
+  - jekyll-seo-tag
